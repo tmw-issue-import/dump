@@ -1,0 +1,1873 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-us" class="no-js">
+<!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8">
+    <title>#859 &#x27;Show Timer&#x27; Forces ElvUI Timer/Memory Leak - Issues - TellMeWhen - Addons - Projects - WoW CurseForge </title>
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    
+        <link rel="shortcut icon" href="https://media.forgecdn.net/avatars/97/676/636293438479169689.png" />
+    
+
+    <!-- Links -->
+    
+    
+
+    <!-- Meta Properties -->
+    
+    
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/Content/2-0-6977-32150/Skins/Blocks/css/compiled.css"/>
+<link rel="stylesheet" href="/Content/2-0-6977-32150/Skins/WoW/css/compiled.css"/>
+<link rel="stylesheet" type="text/css" href="/api/custom-css" />
+    
+
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            Cobalt.runOnHtmlInsert(Cobalt.Forms.handlegReCaptchaRender);
+        };
+    </script>
+
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    <!-- JavaScript -->
+    <script src="/js/jquery?v=zhy3poSy6kGmZe4hNBKDvIn1MM84Smb43pQ4p677GA81"></script>
+
+    <script src="/js/cobalt?v=jsX_SlJQMjvXXXx9yYwR0KxW4c7mDUf5qDn4cvZ6ods1"></script>
+
+    <script src="/js/Elerium?v=eOmp0l7g2GpwxLMh2e-KG66v-DiizK4GjjgguEANGzQ1"></script>
+
+    
+    
+    
+    
+
+    <script>
+        Elerium.ProjectIssueDetails.projectSlug = "tellmewhen";
+        Elerium.ProjectIssueDetails.projectIssueScopedID = 859;
+        Elerium.ProjectIssueDetails.projectIssueActionModelID = 65410757;
+        Elerium.ProjectIssueDetails.projectIssueModelID = 1943252551;
+        Elerium.ProjectIssueDetails.projectIssueID = 4929;
+    </script>   
+
+
+
+ 
+
+</head>
+<body class="site  site-curseforge site-wow body-project body-project-issuedetails disable-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled" data-user-lang="1">
+
+    
+    <!-- No Script -->
+    <noscript class="b-noscript">
+        <p><i class="b-noscript-icon"></i> This site works best with JavaScript enabled. Please enable JavaScript to get the best experience from this site.</p>
+    </noscript>
+    <!-- Layout Start -->
+    
+    
+    <div id="site" class="fixed single-column">
+        <div id="site-main">
+            <!-- Above Header, ex: Netbar -->
+            
+<div class="page-region">
+
+
+<div class="netbar">
+    <span class="netbar-logo netbar-left"><a href="/">CurseForge</a></span>
+    
+        <a href="/register?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f859" id="register-link" class="netbar-signin netbar-right">Register</a>
+        <a href="/login?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f859" id="login-link" class="netbar-signin netbar-right">Sign In</a>
+    
+</div>
+
+</div>
+
+            <!-- Header, ex: Logo, search, etc. -->
+            <header class="main" role="banner">
+                
+
+<div class="e-generic-header">
+    <div class="logo-container">
+        <a href="/">
+            <h1>WoW CurseForge</h1>
+        </a>
+    </div>
+</div>
+
+
+<div class="primary-header-wrapper">
+    <div class="page-region p-header p-header-a">
+
+        <nav class="main p-nav p-nav-a" role="navigation">
+            <ul class="b-list b-list-a b-list_float">
+
+                
+    <li id="nav-projects" class="  selected b-list-item p-nav-item">
+        
+            <a href="/projects"  class="">
+                <span class="b-list-label">
+                   Projects
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-forums" class="  b-list-item p-nav-item">
+        
+            <a href="https://authors.curseforge.com/forums/world-of-warcraft"  class="">
+                <span class="b-list-label">
+                   Forums
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-twitter" class="  b-list-item p-nav-item">
+        
+            <a href="http://bit.ly/2UM9XD0"  class="">
+                <span class="b-list-label">
+                   Twitter
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-discord" class="  b-list-item p-nav-item">
+        
+            <a href="http://bit.ly/CFDiscord"  class="">
+                <span class="b-list-label">
+                   Discord
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dashboard" class=" section b-list-item p-nav-item">
+        
+            <a href="/dashboard"  class="">
+                <span class="b-list-label">
+                   Dashboard
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-paste" class="  b-list-item p-nav-item">
+        
+            <a href="/paste"  class="">
+                <span class="b-list-label">
+                   Paste
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-reward-store" class="  b-list-item p-nav-item">
+        
+            <a href="https://authors.curseforge.com/store"  class="">
+                <span class="b-list-label">
+                   Reward Store
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-knowledge-base" class="  b-list-item p-nav-item">
+        
+            <a href="https://authors.curseforge.com/knowledge-base"  class="">
+                <span class="b-list-label">
+                   Knowledge Base
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-feedback" class="  b-list-item p-nav-item">
+        
+            <a href="https://bit.ly/CurseForgeFeedback" target='_blank' rel='noopener' class="">
+                <span class="b-list-label">
+                   Feedback
+    
+                </span>
+            </a>
+        
+    </li>
+
+
+            </ul>
+            <a data-ga-click-event-tracking-category="Desktop View" id="responsive-topnav-button" class="rs-link rs-link-to-desktop">Desktop View</a>
+            
+        </nav>
+
+        <div class="searchform">
+            <form class="primary-search b-search b-search-a" action="/search" method="get" novalidate="novalidate">
+                <label for="search" class="icon-search"></label>
+                <input class="b-search-input" type="search"  placeholder="Search..." name="search" />
+            </form>
+        </div>
+
+    </div>
+</div>
+
+            </header>
+            <!-- Below Header (Ad container), ex: Leaderboard and Badge unit -->
+            <section class="ad-container">
+                <div class="ad-bin">
+                    
+                </div>
+            </section>
+            <!-- Above Content, Ex: Breadcrumbs -->
+            <section class="atf" role="complementary">
+    <div class="p-header-b">
+        <div class="container">
+            
+            <div class="project-details-container">
+                <div class="project-user">
+                    <div class="avatar-wrapper">
+                        
+                            <a class="e-avatar64 lightbox" href="https://media.forgecdn.net/avatars/54/532/636135407001880375.jpg">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/54/532/62/62/636135407001880375.jpg"/>
+                            </a>
+                        
+                    </div>
+                    <h1 class="project-title  ">
+                        <a href="/projects/tellmewhen">
+                            <span class="overflow-tip">TellMeWhen</span></a>
+                    </h1>
+                    
+                        <h2 class="RootGameCategory">
+                            <a href="/addons">Addons</a>
+                        </h2>
+                    
+                </div>
+            </div>
+
+            <div class="project-controls-container">
+                <div class="categories-container">
+                    <nav class="el-projectdetails-buttonwrapper">
+                        <ul class="el-btn-group">
+                            
+                                        <li>
+                                            <a class="button alt fa-icon-download" href="/projects/tellmewhen/files/latest">
+                                                <span class="download-project">
+                                                    Download Latest File
+                                                </span>
+                                            </a>
+                                        </li>
+                                    
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <nav class="e-header-nav" data-target="e-header-nav">
+        <div class="e-wrapper">
+            <h3 class="e-mobile-heading" data-action="toggle-header-nav"></h3>
+            <ul class="e-menu">
+
+                
+                    <li class="">
+                        <a href="/projects/tellmewhen" >
+                            Overview
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/files" >
+                            File
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/images" >
+                            Image
+                        </a>
+                        
+                    </li>
+                    
+                    <li class=" e-selected ">
+                        <a href="/projects/tellmewhen/issues" >
+                            Issues
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/source" >
+                            Source
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/pages" >
+                            Pages
+                        </a>
+                        
+                    </li>
+                    
+                    <li class=" e-hasSubmenu ">
+                        <a href="/projects/tellmewhen/localization" >
+                            Localization
+                        </a>
+                        
+                           <ul class="e-drop-menu">
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/localization">
+                                       Overview
+                                   </a>
+                                </li>
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/localization/export-lua">
+                                       Export
+                                   </a>
+                                </li>
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/localization/translators">
+                                       Translators
+                                   </a>
+                                </li>
+                            
+                           </ul>
+                        
+                    </li>
+                    
+                    <li class=" e-hasSubmenu ">
+                        <a href="/projects/tellmewhen/relations/dependencies" >
+                            Relations
+                        </a>
+                        
+                           <ul class="e-drop-menu">
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/relations/dependencies">
+                                       Dependencies
+                                   </a>
+                                </li>
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/relations/dependents">
+                                       Dependents
+                                   </a>
+                                </li>
+                            
+                           </ul>
+                        
+                    </li>
+                    
+            </ul>
+
+            <div class="e-actions btn-group">
+                
+                        <a class="button icon-follow unfollow j-tooltip" href="/login?returnUrl=%252fprojects%252ftellmewhen%252fissues%252f859" title="You must log in to follow a project.">
+                            <span>Follow</span>
+                        </a>
+                    
+                    <a class="button tip icon-donate icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?return=https://wow.curseforge.com/projects/tellmewhen?gameCategorySlug=addons&amp;projectID=8025&amp;cn=Add+special+instructions+to+the+addon+author()&amp;business=ascott18%40msn.com&amp;bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted&amp;cancel_return=https://wow.curseforge.com/projects/tellmewhen?gameCategorySlug=addons&amp;projectID=8025&amp;lc=US&amp;item_name=TellMeWhen+(from+curseforge.com)&amp;cmd=_donations&amp;rm=1&amp;no_shipping=1&amp;currency_code=USD" rel="nofollow" title="Donate to this Project" data-action="donate" data-id="8025" data-name="TellMeWhen">
+                        <span>Donate</span>
+                    </a>
+                
+            </div>
+        </div>
+    </nav>
+</section>
+            <div class="container">
+                <div id="content" class="main content-container">
+                    <section class="primary-content" role="main">
+                        
+
+        <form data-project-issue-form action="/projects/tellmewhen/issues/859" method="post" class="project-issue-details closed" enctype="multipart/form-data">
+            <input id="field-security-token" name="security-token" type="hidden" value="3a7e697528a24a528a8bed874b23506e" /><input id="field-authenticity-token" name="fda72993e416abd130075f0ccf894afb9" type="hidden" value="" />
+            <div class="project-issue-header">
+                
+
+                <h2>&#x27;Show Timer&#x27; Forces ElvUI Timer/Memory Leak <span>#859</span></h2>
+                <hr>
+                <div class="project-issue-tagblock">
+                    
+                        <ul class="project-issue-tags">
+                            
+                                <li class="tag-tag">Defect</li>
+                            
+                                <li class="tag-tag">Fixed</li>
+                            
+                        </ul>
+                                        
+                </div>
+
+                <div class="project-issue-status status-closed">
+                    <span>Closed</span>
+                </div>
+
+                
+                    <div class="project-issue-assigned-member">
+                        <span class="e-infoLabel">Assigned to</span>
+                        <span class="user-tag">
+                            
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <a href="/members/Cybeloras">Cybeloras</a>
+                        </span>
+                    </div>
+                
+            </div>
+
+            <div data-project-issue-edit-container></div>
+            <ul class="project-issue-timeline">
+                
+
+                <li class="project-issue-comment-container" data-target="project-issue-description">
+                    
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                    <div class="project-issue-comment">
+                        <header class="project-issue-comment-header">
+                            <a href="/members/Freeebo">Freeebo</a>
+                            <span class="e-infoLabel">created this issue </span><span><abbr class="tip standard-date standard-datetime" title="09 15 2013 20:53:47 (CDT) (UTC-5:00)" data-epoch="1379296427">Sep 15, 2013</abbr></span>
+                            
+                        </header>
+                        <div class="project-issue-comment-body">
+                            <p><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252fkfQwRVt.jpg" rel="nofollow">http://i.imgur.com/kfQwRVt.jpg</a><br><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252fACA5XJk.jpg" rel="nofollow">http://i.imgur.com/ACA5XJk.jpg</a></p><p>Self explanatory. v6.2.5. Showing a cooldown swing forces the ElvUI timer to appear, regardless if the option is ticked or not.</p>
+                        </div>
+                    </div>
+                </li>  
+
+                
+                        <li class="project-issue-event tag-management ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 16px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=16"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Freeebo">Freeebo</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    added the tags
+                                    
+                                        <span class="tag-tag">
+                                            New
+                                        </span>
+                                    
+                                        <span class="tag-tag">
+                                            Defect
+                                        </span>
+                                    </span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 15 2013 20:53:47 (CDT) (UTC-5:00)" data-epoch="1379296427">Sep 15, 2013</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 21:14:56 (CDT) (UTC-5:00)" data-epoch="1379297696">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Unsure if this is related, but on the first attempt of Garrosh on this toon, I started memory leaking (or something) HARD.</p>
+<p><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252foB97DpU.jpg" rel="nofollow">http://i.imgur.com/oB97DpU.jpg</a></p>
+<p>A lot of my icons have 'show timer' and 'show elvui timer text' ticked, so maybe they're trying to double up on themselves or something? Dunno.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 21:17:08 (CDT) (UTC-5:00)" data-epoch="1379297828">Sep 15, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 21:30:04 (CDT) (UTC-5:00)" data-epoch="1379298604">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>And definitely zero LUA errors.</p>
+<p>I sorta want to say that that the memory leak has to do something with the ElvUI text forwarding thing. I stopped lagging after I crashed, but TMW was still jumping up to like 30MB+ usage. No clue why. Will probably jump back down to 6.2.4 in the meantime, just to be safe.</p>
+<p>E: Memory leaky things still happens in 6.2.4, but I don't get massive lag like I had before. So no clue what it is, really. I don't remember seeing this before, ever, so maybe something to do w/6.2.4/5's timer issues? Just thinking of something, dunno.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:16:05 (CDT) (UTC-5:00)" data-epoch="1379304965">Sep 15, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event field-edit ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 16px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=16"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Freeebo">Freeebo</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    edited
+                                    title
+                                    
+                                    
+                                </span> 
+                                <span><abbr class="tip standard-date standard-datetime" title="09 15 2013 21:48:54 (CDT) (UTC-5:00)" data-epoch="1379299734">Sep 15, 2013</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:14:49 (CDT) (UTC-5:00)" data-epoch="1379304889">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Because Elv removed the code that allows that option to work. There isn't anything that I can do about it besides completely remove support for ElvUI's timers until he fixes it.</p>
+<p>I can hack in some code that will force it to work, but that is an ugly fix.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 16 2013 00:04:46 (CDT) (UTC-5:00)" data-epoch="1379307886">Sep 16, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:29:44 (CDT) (UTC-5:00)" data-epoch="1379305784">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>I thought he removed the code that allowed us to specify which auras the Elv timer can hook too? Or does the 'fix' you implement force it to hook to anything w/timer swing, just based on how it was wrote? And is this (in some related way, at least) the deal with the memory leaks and whatnot?</p>
+<p>If so, fucking christ. Damnit Elv.</p>
+<p>PS: Clutch says hi.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:30:01 (CDT) (UTC-5:00)" data-epoch="1379305801">Sep 15, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:31:49 (CDT) (UTC-5:00)" data-epoch="1379305909">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>I added a hack to change this in 6.2.5-1-g5c66208 since my ticket for ElvUI hasn't gotten a response: <a href="/linkout?remoteUrl=http%253a%252f%252fwww.tukui.org%252ftickets%252felvui%252findex.php%253fpage%253dbug_show%2526bug_id%253d363" rel="nofollow">http://www.tukui.org/tickets/elvui/index.php?page=bug_show&amp;bug_id=363</a></p>
+<p>His fix requires me to registere every cooldown sweep that TMW creates with ElvUI so that it will have timers created on it. However, when he changed this, he also removed the code that checks for the variable that is modified by the TMW setting to enable/disable ElvUI's timer texts, so the setting is (was before the hack I just added, anyway) effectively useless.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:34:43 (CDT) (UTC-5:00)" data-epoch="1379306083">Sep 15, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:46:05 (CDT) (UTC-5:00)" data-epoch="1379306765">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Yeah I've been monitoring that thread hoping for a response. No luck. I remember making a ticket about this on day one, and Elv's response was something like "I'm not going to fix other people's addons". Fucking dumb point of view if you ask me.</p>
+<p>Forgive me it went over my head, but does something in this explain the memory leak thingy? Just curious.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 15 2013 23:52:58 (CDT) (UTC-5:00)" data-epoch="1379307178">Sep 15, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>It could be the result of me calling his code to register the cooldown sweep with his system, but it doesn't seem likely to me. I haven't got the slightest clue what might be causing it, though.</p>
+<p>Does it happen when fighting training dummies? Or any other boss? Or was it only on Garrosh?</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 16 2013 00:00:15 (CDT) (UTC-5:00)" data-epoch="1379307615">Sep 16, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>It was only Garrosh. And honestly, only the first two attempts. After that, I tried messing with some settings to fix the double overlapped text, and it then caused OmniCC to kinda shit out (see my other ticket, I updated the OmniCC issue). After that, the game crashed, I came back, and didn't lag anymore. When I checked the TMW usage, it was still high (30+ at times), but it didn't make the game freeze for a second or two every now and then. For all I know this has been happening for months, but I just never checked. I doubt that, though.</p>
+<p>I'll keep an eye on it, test it a bit on dummies and other bosses and update this ticket if necessary.</p>
+<p>E: The 6.2.5-1-g5c66208 version has no memory leaks of sorts on training dummies. And the ElvUI timers now work only when it's checked to, as I'm sure you know. I'll maybe do some flex or LFR and update.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 16 2013 00:20:55 (CDT) (UTC-5:00)" data-epoch="1379308855">Sep 16, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 18 2013 00:06:37 (CDT) (UTC-5:00)" data-epoch="1379480797">Sep 18, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Memory leaks are still prevalent based on heroics I've been doing. It's not as severe as it was when I first reported it, but it's still there for sure.</p>
+<p>On another note, when I restarted my client, OmniCC text disappeared. No LUA of course.</p>
+<p>E: It also came back after a reload.
+E2: For what it matters, this seems to only happen in a raid. Hitting a dummy really does nothing to TMW's memory usage. It seems to increase in size by like 0.1-3MB per second or so, if this matters. If you want, I can send you my TMW profile and you can see if there's something in it, dunno.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 18 2013 05:01:45 (CDT) (UTC-5:00)" data-epoch="1379498505">Sep 18, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 18 2013 15:45:12 (CDT) (UTC-5:00)" data-epoch="1379537112">Sep 18, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Yeah, having your profile would definitely help. </p>
+<p>I have been experiencing some memory issues myself this morning. Not addon related, though. Wow.exe increases it's memory usage by 2gb each time I reload until it has exhausted all my system's memory at 9.5 gb, which is absurd. This morning was the first time that I noticed this, which is strange. I don't know if it might be related to the issues that you are having, but it does lead me to believe that they aren't the fault of TellMeWhen since they have only come up in 5.4 and I haven't gotten a single report of memory usage issues since TMW v2.</p>
+<p>Patch 5.4 has been a disaster as far as bugs and stability issues go, ugh. </p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 18 2013 18:25:33 (CDT) (UTC-5:00)" data-epoch="1379546733">Sep 18, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>I'll throw you my profile after raid. Will be 5+ hours from now.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 18 2013 18:51:13 (CDT) (UTC-5:00)" data-epoch="1379548273">Sep 18, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p><a href="/linkout?remoteUrl=http%253a%252f%252fpastebin.com%252fEHqjFZeZ" rel="nofollow">http://pastebin.com/EHqjFZeZ</a></p>
+<p>Nevermind it's here now.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 00:37:44 (CDT) (UTC-5:00)" data-epoch="1379569064">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Curse.com managed to lose all but your original message in the PM you sent me. Here is what I sent you a few hours ago that got lost (Lazarus forum recovery has got to be the greatest Firefox addon ever):</p>
+<p>Curseforge is down atm, so i will send you this here. Import this:</p>
+<p><code>^1^T^SName^STimer~`Diagnostic~`(~`/tmwtd~`) ^SCode^Slocal~`DATASTRING~J ~J StaticPopupDialogs["TMW_TIMERDIAG"]~`=~`{~J ~`~`~`~`text~`=~`"%s\r\n\r\nCopy~`the~`data~`below~`(press~`Ctrl+C~`to~`copy~`it~`to~`your~`clipboard)~`and~`send~`it~`to~`Cyb~`along~`with~`the~`screenshot~`that~`was~`taken.",~`~J ~`~`~`~`button1~`=~`OKAY,~J ~`~`~`~`timeout~`=~`0,~J ~`~`~`~`showAlert~`=~`true,~J ~`~`~`~`whileDead~`=~`true,~J ~`~`~`~`preferredIndex~`=~`3,~`--~`<a href="http://forums.wowace.com/showthread.php?p=320956~J" rel="nofollow">http://forums.wowace.com/showthread.php?p=320956~J</a> ~`~`~`~`hasEditBox~`=~`1,~J ~`~`~`~`OnShow~`=~`function(self)~J ~`~`~`~`~`~`~`~`self.editBox:SetText(DATASTRING)~J ~`~`~`~`~`~`~`~`self.editBox:HighlightText()~J ~`~`~`~`~`~`~`~`self.editBox:SetFocus()~J ~`~`~`~`end,~J }~J ~J ~J local~`function~`DOTHINGS()~J ~`~`~`~`local~`OUT~`=~`{}~J ~`~`~`~`~J ~`~`~`~`for~`icon~`in~`TMW:InIcons()~`do~J ~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`local~`cd~`=~`icon:GetModuleOrModuleChild("IconModule_CooldownSweep")~J ~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`--~`print(cd)~J ~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`local~`timer~`=~`cd~`and~`cd.cooldown~`and~`cd.cooldown.omnicc~J ~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`OUT[icon:GetName()]~`=~`{~J ~`~`~`~`~`~`~`~`~`~`~`~`attributes~`=~`icon.attributes,~J ~`~`~`~`~`~`~`~`~`~`~`~`icon~`=~`{~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`Enabled~`=~`icon.Enabled,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`Shown~`=~`icon:IsShown(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`Visible~`=~`icon:IsVisible(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`Alpha~`=~`icon:GetAlpha(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`},~J ~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`cd~`=~`cd~`and~`{~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`ClockGCD~`=~`cd.ClockGCD,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`IsEnabled~`=~`cd.IsEnabled,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`IsImplemented~`=~`cd.IsImplemented,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`ShowTimer~`=~`cd.ShowTimer,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`ShowTimerText~`=~`cd.ShowTimerText,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`ShowTimerTextnoOCC~`=~`cd.ShowTimerTextnoOCC,~J ~`~`~`~`~`~`~`~`~`~`~`~`},~J ~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`cd~`=~`cd~`and~`cd.cooldown~`and~`{~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`duration~`=~`cd.cooldown.duration,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`start~`=~`cd.cooldown.start,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`noCooldownCount~`=~`cd.cooldown.noCooldownCount,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`noOCC~`=~`cd.cooldown.noOCC,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`cdShown~`=~`cd.cooldown:IsShown(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`cdVisible~`=~`cd.cooldown:IsVisible(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`cdAlpha~`=~`cd.cooldown:GetAlpha(),~J ~`~`~`~`~`~`~`~`~`~`~`~`},~J ~`~`~`~`~`~`~`~`~`~`~`~`timer~`=~`timer~`and~`{~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerabRation~`=~`timer.abRatio,~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerShown~`=~`timer:IsShown(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerVisible~`=~`timer:IsVisible(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerAlpha~`=~`timer:GetAlpha(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerSettings~`=~`timer:GetSettings(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timertextShown~`=~`timer.text:IsShown(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timertextVisible~`=~`timer.text:IsVisible(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timertextAlpha~`=~`timer.text:GetAlpha(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timertextText~`=~`timer.text:GetText(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerRemain~`=~`timer.start~`and~`timer:GetRemain(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timeroverallScale~`=~`timer.abRatio~`*~`(timer:GetEffectiveScale()/UIParent:GetScale()),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerShouldShow~`=~`timer:ShouldShow(),~J ~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`timerExpectedText~`=~`timer.start~`and~`timer:GetTimeText(timer:GetRemain()),~J ~`~`~`~`~`~`~`~`~`~`~`~`}~J ~`~`~`~`~`~`~`~`~`~`~`~`~J ~`~`~`~`~`~`~`~`}~J ~`~`~`~`~`~`~`~`~J ~`~`~`~`end~J ~`~`~`~`~J ~`~`~`~`Screenshot()~J ~`~`~`~`local~`screenshotInfo~`=~`format("Captured~`screenshot:~`WoWScrnShot_%s",~`date():gsub("[/:]",~`""):gsub("~`",~`"_"))~J ~`~`~`~`DATASTRING~`=~`TMW:MakeSerializedDataPretty(TMW:Serialize(OUT))~J ~`~`~`~`~J ~`~`~`~`StaticPopup_Show("TMW_TIMERDIAG",~`screenshotInfo)~J ~`~`~`~`~J end~J ~J ~J TMW:RegisterChatCommand("tmwtd",~`DOTHINGS)~J ~J ~J  ^t^N70009^S~`~| ^Scodesnippet^^</code></p>
+<p>The next time your timers are screwed up, type /tmwtd. It will pop up a dialog that will have a string, copy that string and put it in that ticket we were working in (or PM me if curseforge is still down). It will also take a screenshot; upload that screenshot as well and include in with the string.</p>
+<p>You need to run the command when things are broken and you are in combat and there should be timers shown but aren't. The data will be a snapshot of a bunch of relevant attributes and information that will tell me what is aware of your current timers and what isn't.</p>
+<p>It would also help if you labeled the groupID of each group in the screenshot, but I suppose having the export string of your profile would accomplish that as well.</p>
+<p>Thanks for working with me on this one. I want to get this figured out because this whole situation is just bizarre.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 13:45:51 (CDT) (UTC-5:00)" data-epoch="1379616351">Sep 19, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 00:43:11 (CDT) (UTC-5:00)" data-epoch="1379569391">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>You say I have to run this in combat when the timers are broken. Does that mean it won't work if timers aren't broken? Because just testing the command does not seem to do anything.</p>
+<p><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252fxU9JNJp.jpg" rel="nofollow">http://i.imgur.com/xU9JNJp.jpg</a> for reference on the import. </p>
+<p>And yes, this import was after you edited your original post. I noticed that one had some crossed out text and had some error shit.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 00:45:29 (CDT) (UTC-5:00)" data-epoch="1379569529">Sep 19, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 03:10:12 (CDT) (UTC-5:00)" data-epoch="1379578212">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>You need to run the snippet manually or reload your UI for the code to run.</p>
+<p>It will work if timers aren't broken, but it won't give any interesting data.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 04:36:56 (CDT) (UTC-5:00)" data-epoch="1379583416">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p><a href="/linkout?remoteUrl=http%253a%252f%252fpastebin.com%252ft5ghdfqk" rel="nofollow">http://pastebin.com/t5ghdfqk</a></p>
+<p>I get that LUA error when I try to run the script. Unless of course that LUA error is the spitout you were referring to the in the first place.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 13:46:42 (CDT) (UTC-5:00)" data-epoch="1379616402">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>I edited my comment with a fixed version. Try again. Sorry. I wrote it for the version of OmniCC I was using, but it was apparently slightly out of date.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 13:56:55 (CDT) (UTC-5:00)" data-epoch="1379617015">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>With that version I get <a href="/linkout?remoteUrl=http%253a%252f%252fpastebin.com%252fqGbFAgXA" rel="nofollow">http://pastebin.com/qGbFAgXA</a> for a LUA.</p>
+<p>E: Would it just be more efficient if I turned off every addon except TMW and OmniCC? Or does some other addon possibly comingling have the possibility of being important in the final readout?</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 13:58:06 (CDT) (UTC-5:00)" data-epoch="1379617086">Sep 19, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 14:10:49 (CDT) (UTC-5:00)" data-epoch="1379617849">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>You need to run the code before you try the command again. You are still using the old one. Make sure you also delete the old one.</p>
+<p>Leave everything enabled.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 14:14:58 (CDT) (UTC-5:00)" data-epoch="1379618098">Sep 19, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 14:14:03 (CDT) (UTC-5:00)" data-epoch="1379618043">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Ok, that one worked. Doing LFR with a friend real quick, will go try to break OmniCC after that. Should be an hour or two, before it's been pretty consistent with breaking OmniCC after a relog.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 15:01:42 (CDT) (UTC-5:00)" data-epoch="1379620902">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Other ticket is now updated with pastebin + images.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 19 2013 16:23:15 (CDT) (UTC-5:00)" data-epoch="1379625795">Sep 19, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Out of curiosity, is there any troubleshooting you want me to do on my end for this ticket?</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 13:17:26 (CDT) (UTC-5:00)" data-epoch="1379701046">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Can you try to see if you can reproduce the issue with TellMeWhen as the only addon enabled (even disable OmniCC)? Try running LFR (so your guild doesn't get pissed for your inevitable poor performance due to other missing addons, haha) and see if TMW's memory usage still gets out of control.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 13:46:21 (CDT) (UTC-5:00)" data-epoch="1379702781">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Sure. Lemme see what happens.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 14:06:41 (CDT) (UTC-5:00)" data-epoch="1379704001">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252fzBtNnrY.jpg" rel="nofollow">http://i.imgur.com/zBtNnrY.jpg</a></p>
+<p><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252fLKLVSY4.jpg" rel="nofollow">http://i.imgur.com/LKLVSY4.jpg</a></p>
+<p><a href="/linkout?remoteUrl=http%253a%252f%252fi.imgur.com%252fog3itRo.jpg" rel="nofollow">http://i.imgur.com/og3itRo.jpg</a></p>
+<p>This was on my rogue compared to my warrior, if that matters. The original 'memory leak' I had was on him, so it shouldn't.</p>
+<p>One thing I noticed is that it'd climb up to around 25MB on TellMeWhen as a ceiling, then immediately reset back to 11MB. Not sure if some sorta "safeguard" is kicking in and resetting, or maybe Blizzard is just tracking the usage improperly? It also seemed to gain memory usage by about 0.1-0.3MB/s</p>
+<p>I also believe with no addons it climbed lower than with addons, if that matters. Probably because no interactions with Elv/OmniCC but you'd know better than me.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 14:10:47 (CDT) (UTC-5:00)" data-epoch="1379704247">Sep 20, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:19:07 (CDT) (UTC-5:00)" data-epoch="1379711947">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Could I get your rogue's profile export string too? Thanks. (I want to look for similarities between them; icons they both share, etc.)</p>
+<p>The reason it goes back down is because the garbage collector kicks in. Brief explanation:</p>
+<p>Most scripting languages (like Lua) (and also some other languages like Java/JVM languages and C#/other CLR languages) have their memory managed automatically so that the software itself doesn't have to worry about letting the operating system know what memory is no longer in use. This is called garbage collection. When I create some tables or functions in Lua, the Lua interpreter (which is built into WoW.exe) allocates some memory from the operating system. That memory stays allocated until Lua can determine that it is no longer used - the objects may still exist and they may contain some data, but they cannot be accessed in any way with any amount of code, so Lua un-allocates that memory and gives it back to the operating system.</p>
+<p>WoW's Lua environment is configured in such a way that garbage collection is never run in combat unless it absolutely has to (because it could cause a slight lag/general sluggishness if the garbage collector is running all the time) in order to allocate some more memory for an addon that needs it.</p>
+<p>Knowing that this is happening is actually very helpful because it tells me something - this isn't an issue with excess widgets (frames, button, checkboxes, dropdowns, textures, font strings, cooldown sweeps, progress bars, etc.) being created because they aren't garbage collected. Now I just have to get myself into LFR and see if I can figure out why this is happening. Which could be tricky.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:19:51 (CDT) (UTC-5:00)" data-epoch="1379711991">Sep 20, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:22:18 (CDT) (UTC-5:00)" data-epoch="1379712138">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Oh, one more thing. Could you try and see if you could reproduce this issue while solo in an old raid - Karazhan or Tempest Keep or whatever, just note what raids you tried and what the result was. Reload your UI between each raid if you try more than one.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:22:18 (CDT) (UTC-5:00)" data-epoch="1379712138">Sep 20, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:43:05 (CDT) (UTC-5:00)" data-epoch="1379713385">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p><a href="/linkout?remoteUrl=http%253a%252f%252fpastebin.com%252fpQA8mRqm" rel="nofollow">http://pastebin.com/pQA8mRqm</a> Rogue's profile.</p>
+<p>Some things are the same, but some aren't, such as G12+G13, as I don't raid on my rogue, so all the up to date auras for fights like H Thok or whatnot aren't there.</p>
+<p>I'll go back to Karazhan on my rogue and see what happens. I need to go there anyway.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:43:38 (CDT) (UTC-5:00)" data-epoch="1379713418">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>And one more thing - if you do get a chance to be in a situation where you are able to reproduce the issue, rename or move or delete the World Of Warcraft\Interface\AddOns\TellMeWhen\Components\EventHandlers\Animations folder and then reload your UI. Then see if the issue persists.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Freeebo">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/7bd80658a7ccc03394ff22fee8a4e744?d=retro&amp;s=48"  alt="Freeebo&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Freeebo">Freeebo</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:44:16 (CDT) (UTC-5:00)" data-epoch="1379713456">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Also, do you want me to run those old instances without any addons except TMW again? Last test also had Addon Control Panel, but I don't think that matters.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:46:46 (CDT) (UTC-5:00)" data-epoch="1379713606">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Are you on US servers? If so, add me - <del>&lt;Redacted&gt;</del> good deal!</p>
+<p>I suppose it doesn't matter if you keep the rest of your addons enabled since it is clear that the issue happens either way.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                            <hr/>
+                                            <span class="e-infoLabel">Edited</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 16:50:35 (CDT) (UTC-5:00)" data-epoch="1379713835">Sep 20, 2013</abbr></span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 20 2013 20:59:12 (CDT) (UTC-5:00)" data-epoch="1379728752">Sep 20, 2013</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>After a lot of back and forth trying out different things between Freeebo and I, including an LFR run where I averaged 36k DPS because I was playing around with code the entire run and where I finally figured out the problem by accident when I died on Immerseus and thought to look at my memory usage for the hell of it, this problem has been fixed.</p>
+<p>The issue was in LibDogTag-Unit-3.0's Auras module where a metamethod was getting invoked when it should not have been, causing a huge amount of extra tables to be created beyond what was actually needed. This bug has existed since March 22, 2008 when the Auras module was first written and has also been reported many times in the comments at <a href="http://www.wowace.com/addons/libdogtag-3-0/" rel="nofollow">http://www.wowace.com/addons/libdogtag-3-0/</a></p>
+<p>The fix will be available when CurseForge's packager comes back online, whenever that may be.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event tag-management ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Cybeloras">Cybeloras</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    removed a tag
+                                    
+                                        <span class="tag-tag">
+                                            New
+                                        </span>
+                                    </span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 20 2013 21:01:21 (CDT) (UTC-5:00)" data-epoch="1379728881">Sep 20, 2013</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event tag-management ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Cybeloras">Cybeloras</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    added a tag
+                                    
+                                        <span class="tag-tag">
+                                            Fixed
+                                        </span>
+                                    </span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 20 2013 21:01:22 (CDT) (UTC-5:00)" data-epoch="1379728882">Sep 20, 2013</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event status-change closed">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Cybeloras">Cybeloras</a>
+                                </span>
+                                <span class="e-infoLabel">closed issue</span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 20 2013 21:01:23 (CDT) (UTC-5:00)" data-epoch="1379728883">Sep 20, 2013</abbr></span>
+                            </div>
+                        </li>
+                    
+            </ul>
+            <div class="project-issue-timeline-actions">
+                <hr/>
+                
+                    <p>
+                        To post a comment, please 
+                        <a href="/login?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f859">login</a> 
+                        or <a href="/register?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f859">register</a> a new account.
+                    </p>
+                
+            </div>
+            
+        </form>
+
+                        
+                    </section>
+                </div>
+            </div>
+            
+            <!-- Above Footer -->
+            <section class="ad-container ad-container-footer">
+                <div class="ad-bin">
+                    
+                </div>
+            </section>
+            <div id="footer-push"></div>
+        </div>
+        <footer id="footer">
+            
+
+<footer class="curseforge-footer">
+    <nav class="curseforge-footer__container">
+		<section class="curseforge-footer__section curseforge-footer__section--logo">
+			<a href="https://twitch.tv" target="_blank" title="Twitch">
+				<figure class="curseforge-footer__logo-container">
+					<svg width="94px" height="32px" viewBox="0 0 94 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>Twitch</title>
+						<defs></defs>
+						<g id="logos/LogoTwitch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path class="curseforge-footer__logo" d="M88.5,5 L82.5,5 L82.5,0 L73.5,0 L67.5,5 L62,5 L59.5,7.5 L59.5,5 L54.5,5 L54.5,0 L36.5,0 L36.5,5 L16.5,5 L11.5,0 L0.5,0 L0.5,22 L5.5,27.25 L14.5,32 L20.5,32 L20.5,30.5 L23.5,32 L35.5,32 L37.5,29 L38.5,32 L45.5,32 L45.5,29 L48.5,32 L56.5,32 L57,29 L59.5,32 L69.5,32 L72.5,29 L72.5,32 L76.5,32 L79.5,29 L79.5,32 L86.5,32 L93.5,26 L93.5,10 L88.5,5 Z M13.5,13 L8.5,13 L8.5,19 L13.5,19 L13.5,25 L6.5,25 L2.5,21 L2.5,2 L8.5,2 L8.5,7 L13.5,7 L13.5,13 Z M36.5,21.5 L33,25 L15.5,25 L15.5,7 L21.5,7 L21.5,19 L23.5,19 L23.5,7 L29.5,7 L29.5,19 L31.5,19 L31.5,7 L36.5,7 L36.5,21.5 Z M44.5,25 L38.5,25 L38.5,7 L44.5,7 L44.5,25 Z M44.5,5 L38.5,5 L38.5,2 L44.5,2 L44.5,5 Z M57.5,13 L52.5,13 L52.5,19 L57.5,19 L57.5,25 L50.5,25 L46.5,21 L46.5,2 L52.5,2 L52.5,7 L57.5,7 L57.5,13 Z M72.5,13 L65.5,13 L65.5,19 L72.5,19 L72.5,25 L63.5,25 L59.5,21 L59.5,11 L63.5,7 L72.5,7 L72.5,13 Z M91.5,25 L85.5,25 L85.5,13 L80.5,13 L80.5,25 L74.5,25 L74.5,2 L80.5,2 L80.5,7 L87.5,7 L91.5,11 L91.5,25 Z" id="LogoTwitch" fill="#000000" fill-rule="nonzero"></path>
+						</g>
+					</svg>
+				</figure>
+			</a>
+			<span class="curseforge-footer__copyright">© 2019 Twitch Interactive, Inc</span>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://twitch.tv/p/about/" target="_blank" class="curseforge-footer__item">About</a>
+			<a href="https://twitch.tv/jobs/" target="_blank" class="curseforge-footer__item">Careers</a>
+			<a href="https://twitch.tv/blog/" target="_blank" class="curseforge-footer__item">Blog</a>
+			<a href="https://twitch.tv/p/about/press-releases/" target="_blank" class="curseforge-footer__item">Press</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://twitch.tv/p/brand/" target="_blank" class="curseforge-footer__item">Brand</a>
+			<a href="https://music.twitch.tv/" target="_blank" class="curseforge-footer__item">Music</a>
+			<a href="https://twitchadvertising.tv/" target="_blank" class="curseforge-footer__item">Advertise</a>
+			<a href="https://twitch.tv/legal/ad-choices/" target="_blank" class="curseforge-footer__item">Ad Choices</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://www.twitch.tv/prime/" target="_blank" class="curseforge-footer__item">Prime</a>
+			<a href="https://twitch.tv/p/partners/" target="_blank" class="curseforge-footer__item">Partners</a>
+			<a href="https://affiliate.twitch.tv/" target="_blank" class="curseforge-footer__item">Affiliates</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://dev.twitch.tv/" target="_blank" class="curseforge-footer__item">Developers</a>
+			<a href="https://support.curseforge.com/hc/en-us" target="_blank" class="curseforge-footer__item">Help</a>
+			<a href="https://twitch.uservoice.com/forums/915910-game-mods-curseforge" target="_blank" class="curseforge-footer__item">Feedback</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://twitch.tv/legal/terms-of-service/" target="_blank" class="curseforge-footer__item">Terms of Service</a>
+			<a href="https://twitch.tv/legal/privacy-policy/" target="_blank" class="curseforge-footer__item">Privacy Policy</a>
+			<a href="https://twitch.tv/legal/cookie-policy/" target="_blank" class="curseforge-footer__item">Cookie Policy</a>
+		</section>
+    </nav>
+	<div class="curseforge-footer__copyright-container">
+		<span class="curseforge-footer__copyright">© 2019 Twitch Interactive, Inc</span>
+	</div>
+</footer>
+
+        </footer>
+        
+    </div>
+
+    <!-- Layout End -->
+    <div id="analytics">
+        <!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(
+        ['_setAccount', 'UA-389142-3'],
+        ['_setDomainName', 'curseforge.com'],
+        ['_addIgnoredRef', 'curseforge.com'],
+        ['_trackPageview'],
+        ['b._setAccount', 'UA-389142-11'],
+        ['b._setDomainName', 'curseforge.com'],
+        ['b._addIgnoredRef', 'curseforge.com'],
+        ['b._trackPageview']
+);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Lotame -->
+<script src="https://tags.crwdcntrl.net/c/3613/cc.js?ns=_cc3613" id="LOTCC_3613"></script>
+<script>
+_cc3613.bcp();
+</script>
+<!-- End Lotame -->
+    </div>
+
+    
+    
+
+<script type="text/javascript">
+    Cobalt.Device.initialize();
+    Cobalt.Burger.initializeEarly();
+
+    Cobalt.Constants.initialize({"StaticURL":"/Content/2-0-6977-32150","SkinPath":"/Content/2-0-6977-32150/Skins/WoW","MediaURL":"https://media.forgecdn.net/","AvatarURL":"https://media.forgecdn.net/avatars","AttachmentURL":"https://media.forgecdn.net/attachments","ActiveConfiguration":"production","PrivacyPolicyLastUpdated":"0"});
+    
+    Cobalt.Constants.BuildVersion = "2-0-6977-32150";
+    Cobalt.Constants.IsDevelopment = false;
+    Cobalt.Constants.IgnoredUserIDs = [];
+    Cobalt.Constants.ServerTimestamp = 1550200687368.05
+    Cobalt.Constants.FacebookAppID = "";
+    Cobalt.Constants.QuoteCssClasses = "";
+    Cobalt.User.EnabledLanguageIDs = [1,2,3,4,7,8,9,15,16];
+    Cobalt.User.MaxQuoteDepth = 5;
+    Cobalt.User.AuthToken = "";
+    Cobalt.TinyMCE.extraPlugins = "";
+    Cobalt.TinyMCE.extraButtons = "";
+    Cobalt.TinyMCE.extraCustomPlugins = "";     
+
+    // NOTE: if you need to debug into tinymce, then change the following line to tinymce.js
+    Cobalt.TinyMCE.url = Cobalt.Constants.StaticURL + "/js/tinymce/tiny_mce/tinymce.min.js";
+    Cobalt.TinyMCE.customPluginUrl = Cobalt.Constants.StaticURL + "/js/tinymce/custom_plugins";
+    Cobalt.TinyMCE.skin_url = Cobalt.Constants.StaticURL + "/js/tinymce/custom_skin";
+    
+   
+    
+    Cobalt.Constants.SiteID = 10;
+    Cobalt.Constants.SiteName = "WoW CurseForge";
+    Cobalt.TinyMCE.fontColorEnabled = true;
+    Cobalt.TinyMCE.fontSizeEnabled = true;
+    Cobalt.TinyMCE.fontFamilyEnabled = true;
+    Cobalt.TinyMCE.textAlignmentEnabled = true;
+    Cobalt.TinyMCE.smiliesEnabled = true;
+    Cobalt.TinyMCE.forceSimpleBBCodeEditor = false;  
+    Cobalt.Constants.NestedQuotePreference  = 1;
+    
+    $.ajaxSetup({
+        data: {},
+        timeout: 30000
+    });
+    
+    
+
+    //bbcode entries
+    
+    Cobalt.Markup.customBBcodeButtons = [];    
+    
+    
+    
+    Cobalt.CMS.CobaltCss = ["/Content/2-0-6977-32150/Skins/Global-TinyMCE/css/compiled.css"];    
+    Cobalt.CMS.ProjectCss = ["/Content/2-0-6977-32150/Skins/WoW/css/compiled.css"];
+
+    // set the tracking id for google analytics on this site
+    Cobalt.Analytics.trackingId = 'UA-389142-11';
+
+</script>
+
+
+
+<script>
+    hljs.initHighlighting();
+</script>
+<script type="text/javascript">
+
+    Cobalt.runOnLoad(function () {
+        Cobalt.initialize([{dependency:Elerium.ProjectIssueDetails, priority:99, name:'Elerium.ProjectIssueDetails'},{dependency:Cobalt.TinyMCE, priority:99, name:'Cobalt.TinyMCE'},{dependency:Elerium.ProjectMobileSubMenu, priority:99, name:'Elerium.ProjectMobileSubMenu'},{dependency:Elerium.ProjectAnalytics, priority:99, name:'Elerium.ProjectAnalytics'},{dependency:Elerium.Favorite, priority:99, name:'Elerium.Favorite'},{dependency:Cobalt.Tabs, priority:99, name:'Cobalt.Tabs'},{dependency:Cobalt.NiceDates, priority:99, name:'Cobalt.NiceDates'},{dependency:Cobalt.Core, priority:99, name:'Cobalt.Core'},{dependency:Cobalt.Forms, priority:99, name:'Cobalt.Forms'},{dependency:Cobalt.UI, priority:99, name:'Cobalt.UI'},{dependency:Cobalt.Auth, priority:99, name:'Cobalt.Auth'},{dependency:Cobalt.Notifications, priority:99, name:'Cobalt.Notifications'},{dependency:Cobalt.Feedback, priority:99, name:'Cobalt.Feedback'},{dependency:Cobalt.WarningNotification, priority:99, name:'Cobalt.WarningNotification'},{dependency:Cobalt.Footer, priority:99, name:'Cobalt.Footer'},{dependency:Cobalt.Tidbit, priority:99, name:'Cobalt.Tidbit'},{dependency:Cobalt.BunnyEars, priority:99, name:'Cobalt.BunnyEars'},{dependency:Elerium.OverflowTip, priority:99, name:'Elerium.OverflowTip'},{dependency:Elerium.PostAction, priority:99, name:'Elerium.PostAction'},{dependency:Elerium.Analytics, priority:99, name:'Elerium.Analytics'},{dependency:Elerium.TwitchNurture, priority:99, name:'Elerium.TwitchNurture'}]);
+    });
+
+</script>
+</body>
+</html>

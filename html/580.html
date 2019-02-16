@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-us" class="no-js">
+<!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8">
+    <title>#580 Texts.lua line 438: attempt to compare nil with number - Issues - TellMeWhen - Addons - Projects - WoW CurseForge </title>
+    <meta name="description" content="" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Responsive Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+
+    
+        <link rel="shortcut icon" href="https://media.forgecdn.net/avatars/97/676/636293438479169689.png" />
+    
+
+    <!-- Links -->
+    
+    
+
+    <!-- Meta Properties -->
+    
+    
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/Content/2-0-6977-32150/Skins/Blocks/css/compiled.css"/>
+<link rel="stylesheet" href="/Content/2-0-6977-32150/Skins/WoW/css/compiled.css"/>
+<link rel="stylesheet" type="text/css" href="/api/custom-css" />
+    
+
+    <script type="text/javascript">
+        var onloadCallback = function () {
+            Cobalt.runOnHtmlInsert(Cobalt.Forms.handlegReCaptchaRender);
+        };
+    </script>
+
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    <!-- JavaScript -->
+    <script src="/js/jquery?v=zhy3poSy6kGmZe4hNBKDvIn1MM84Smb43pQ4p677GA81"></script>
+
+    <script src="/js/cobalt?v=jsX_SlJQMjvXXXx9yYwR0KxW4c7mDUf5qDn4cvZ6ods1"></script>
+
+    <script src="/js/Elerium?v=eOmp0l7g2GpwxLMh2e-KG66v-DiizK4GjjgguEANGzQ1"></script>
+
+    
+    
+    
+    
+
+    <script>
+        Elerium.ProjectIssueDetails.projectSlug = "tellmewhen";
+        Elerium.ProjectIssueDetails.projectIssueScopedID = 580;
+        Elerium.ProjectIssueDetails.projectIssueActionModelID = 65410757;
+        Elerium.ProjectIssueDetails.projectIssueModelID = 1943252551;
+        Elerium.ProjectIssueDetails.projectIssueID = 5929;
+    </script>   
+
+
+
+ 
+
+</head>
+<body class="site  site-curseforge site-wow body-project body-project-issuedetails disable-ads user-anonymous lang-en site-lang-en template-none skin-light-on-dark responsive-enabled" data-user-lang="1">
+
+    
+    <!-- No Script -->
+    <noscript class="b-noscript">
+        <p><i class="b-noscript-icon"></i> This site works best with JavaScript enabled. Please enable JavaScript to get the best experience from this site.</p>
+    </noscript>
+    <!-- Layout Start -->
+    
+    
+    <div id="site" class="fixed single-column">
+        <div id="site-main">
+            <!-- Above Header, ex: Netbar -->
+            
+<div class="page-region">
+
+
+<div class="netbar">
+    <span class="netbar-logo netbar-left"><a href="/">CurseForge</a></span>
+    
+        <a href="/register?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f580" id="register-link" class="netbar-signin netbar-right">Register</a>
+        <a href="/login?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f580" id="login-link" class="netbar-signin netbar-right">Sign In</a>
+    
+</div>
+
+</div>
+
+            <!-- Header, ex: Logo, search, etc. -->
+            <header class="main" role="banner">
+                
+
+<div class="e-generic-header">
+    <div class="logo-container">
+        <a href="/">
+            <h1>WoW CurseForge</h1>
+        </a>
+    </div>
+</div>
+
+
+<div class="primary-header-wrapper">
+    <div class="page-region p-header p-header-a">
+
+        <nav class="main p-nav p-nav-a" role="navigation">
+            <ul class="b-list b-list-a b-list_float">
+
+                
+    <li id="nav-projects" class="  selected b-list-item p-nav-item">
+        
+            <a href="/projects"  class="">
+                <span class="b-list-label">
+                   Projects
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-forums" class="  b-list-item p-nav-item">
+        
+            <a href="https://authors.curseforge.com/forums/world-of-warcraft"  class="">
+                <span class="b-list-label">
+                   Forums
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-twitter" class="  b-list-item p-nav-item">
+        
+            <a href="http://bit.ly/2UM9XD0"  class="">
+                <span class="b-list-label">
+                   Twitter
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-discord" class="  b-list-item p-nav-item">
+        
+            <a href="http://bit.ly/CFDiscord"  class="">
+                <span class="b-list-label">
+                   Discord
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-dashboard" class=" section b-list-item p-nav-item">
+        
+            <a href="/dashboard"  class="">
+                <span class="b-list-label">
+                   Dashboard
+    
+                </span>
+            </a>
+        
+            <ul class="">
+                
+    <li id="nav-paste" class="  b-list-item p-nav-item">
+        
+            <a href="/paste"  class="">
+                <span class="b-list-label">
+                   Paste
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-reward-store" class="  b-list-item p-nav-item">
+        
+            <a href="https://authors.curseforge.com/store"  class="">
+                <span class="b-list-label">
+                   Reward Store
+    
+                </span>
+            </a>
+        
+    </li>
+
+            </ul>
+        
+    </li>
+
+    <li id="nav-knowledge-base" class="  b-list-item p-nav-item">
+        
+            <a href="https://authors.curseforge.com/knowledge-base"  class="">
+                <span class="b-list-label">
+                   Knowledge Base
+    
+                </span>
+            </a>
+        
+    </li>
+
+    <li id="nav-feedback" class="  b-list-item p-nav-item">
+        
+            <a href="https://bit.ly/CurseForgeFeedback" target='_blank' rel='noopener' class="">
+                <span class="b-list-label">
+                   Feedback
+    
+                </span>
+            </a>
+        
+    </li>
+
+
+            </ul>
+            <a data-ga-click-event-tracking-category="Desktop View" id="responsive-topnav-button" class="rs-link rs-link-to-desktop">Desktop View</a>
+            
+        </nav>
+
+        <div class="searchform">
+            <form class="primary-search b-search b-search-a" action="/search" method="get" novalidate="novalidate">
+                <label for="search" class="icon-search"></label>
+                <input class="b-search-input" type="search"  placeholder="Search..." name="search" />
+            </form>
+        </div>
+
+    </div>
+</div>
+
+            </header>
+            <!-- Below Header (Ad container), ex: Leaderboard and Badge unit -->
+            <section class="ad-container">
+                <div class="ad-bin">
+                    
+                </div>
+            </section>
+            <!-- Above Content, Ex: Breadcrumbs -->
+            <section class="atf" role="complementary">
+    <div class="p-header-b">
+        <div class="container">
+            
+            <div class="project-details-container">
+                <div class="project-user">
+                    <div class="avatar-wrapper">
+                        
+                            <a class="e-avatar64 lightbox" href="https://media.forgecdn.net/avatars/54/532/636135407001880375.jpg">
+                                <img src="https://media.forgecdn.net/avatars/thumbnails/54/532/62/62/636135407001880375.jpg"/>
+                            </a>
+                        
+                    </div>
+                    <h1 class="project-title  ">
+                        <a href="/projects/tellmewhen">
+                            <span class="overflow-tip">TellMeWhen</span></a>
+                    </h1>
+                    
+                        <h2 class="RootGameCategory">
+                            <a href="/addons">Addons</a>
+                        </h2>
+                    
+                </div>
+            </div>
+
+            <div class="project-controls-container">
+                <div class="categories-container">
+                    <nav class="el-projectdetails-buttonwrapper">
+                        <ul class="el-btn-group">
+                            
+                                        <li>
+                                            <a class="button alt fa-icon-download" href="/projects/tellmewhen/files/latest">
+                                                <span class="download-project">
+                                                    Download Latest File
+                                                </span>
+                                            </a>
+                                        </li>
+                                    
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <nav class="e-header-nav" data-target="e-header-nav">
+        <div class="e-wrapper">
+            <h3 class="e-mobile-heading" data-action="toggle-header-nav"></h3>
+            <ul class="e-menu">
+
+                
+                    <li class="">
+                        <a href="/projects/tellmewhen" >
+                            Overview
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/files" >
+                            File
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/images" >
+                            Image
+                        </a>
+                        
+                    </li>
+                    
+                    <li class=" e-selected ">
+                        <a href="/projects/tellmewhen/issues" >
+                            Issues
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/source" >
+                            Source
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="">
+                        <a href="/projects/tellmewhen/pages" >
+                            Pages
+                        </a>
+                        
+                    </li>
+                    
+                    <li class=" e-hasSubmenu ">
+                        <a href="/projects/tellmewhen/localization" >
+                            Localization
+                        </a>
+                        
+                           <ul class="e-drop-menu">
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/localization">
+                                       Overview
+                                   </a>
+                                </li>
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/localization/export-lua">
+                                       Export
+                                   </a>
+                                </li>
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/localization/translators">
+                                       Translators
+                                   </a>
+                                </li>
+                            
+                           </ul>
+                        
+                    </li>
+                    
+                    <li class=" e-hasSubmenu ">
+                        <a href="/projects/tellmewhen/relations/dependencies" >
+                            Relations
+                        </a>
+                        
+                           <ul class="e-drop-menu">
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/relations/dependencies">
+                                       Dependencies
+                                   </a>
+                                </li>
+                            
+                                <li class="">
+                                   <a href="/projects/tellmewhen/relations/dependents">
+                                       Dependents
+                                   </a>
+                                </li>
+                            
+                           </ul>
+                        
+                    </li>
+                    
+            </ul>
+
+            <div class="e-actions btn-group">
+                
+                        <a class="button icon-follow unfollow j-tooltip" href="/login?returnUrl=%252fprojects%252ftellmewhen%252fissues%252f580" title="You must log in to follow a project.">
+                            <span>Follow</span>
+                        </a>
+                    
+                    <a class="button tip icon-donate icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?return=https://wow.curseforge.com/projects/tellmewhen?gameCategorySlug=addons&amp;projectID=8025&amp;cn=Add+special+instructions+to+the+addon+author()&amp;business=ascott18%40msn.com&amp;bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted&amp;cancel_return=https://wow.curseforge.com/projects/tellmewhen?gameCategorySlug=addons&amp;projectID=8025&amp;lc=US&amp;item_name=TellMeWhen+(from+curseforge.com)&amp;cmd=_donations&amp;rm=1&amp;no_shipping=1&amp;currency_code=USD" rel="nofollow" title="Donate to this Project" data-action="donate" data-id="8025" data-name="TellMeWhen">
+                        <span>Donate</span>
+                    </a>
+                
+            </div>
+        </div>
+    </nav>
+</section>
+            <div class="container">
+                <div id="content" class="main content-container">
+                    <section class="primary-content" role="main">
+                        
+
+        <form data-project-issue-form action="/projects/tellmewhen/issues/580" method="post" class="project-issue-details closed" enctype="multipart/form-data">
+            <input id="field-security-token" name="security-token" type="hidden" value="bb00a9fdc6194bed95302be9c68478be" /><input id="field-authenticity-token" name="ffeb63158247f7c254c04f5291d2b7b61" type="hidden" value="" />
+            <div class="project-issue-header">
+                
+
+                <h2>Texts.lua line 438: attempt to compare nil with number <span>#580</span></h2>
+                <hr>
+                <div class="project-issue-tagblock">
+                    
+                        <ul class="project-issue-tags">
+                            
+                                <li class="tag-tag">Defect</li>
+                            
+                                <li class="tag-tag">Fixed</li>
+                            
+                        </ul>
+                                        
+                </div>
+
+                <div class="project-issue-status status-closed">
+                    <span>Closed</span>
+                </div>
+
+                
+                    <div class="project-issue-assigned-member">
+                        <span class="e-infoLabel">Assigned to</span>
+                        <span class="user-tag">
+                            
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <a href="/members/Cybeloras">Cybeloras</a>
+                        </span>
+                    </div>
+                
+            </div>
+
+            <div data-project-issue-edit-container></div>
+            <ul class="project-issue-timeline">
+                
+
+                <li class="project-issue-comment-container" data-target="project-issue-description">
+                    
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/AmeroGer">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/43cc77b13a814bbd57787efe7f54317c?d=retro&amp;s=48"  alt="AmeroGer&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                    <div class="project-issue-comment">
+                        <header class="project-issue-comment-header">
+                            <a href="/members/AmeroGer">AmeroGer</a>
+                            <span class="e-infoLabel">created this issue </span><span><abbr class="tip standard-date standard-datetime" title="09 3 2012 04:47:22 (CDT) (UTC-5:00)" data-epoch="1346665642">Sep 3, 2012</abbr></span>
+                            
+                                <div class="issue-user-role"><span class="e-infoLabel">Tester</span></div>
+                            
+                        </header>
+                        <div class="project-issue-comment-body">
+                            <p>I tried to import a profile (create new profile) in r568 and got this instead:</p><p>Error occured in: Global<br>Count: 1<br>Message: ...en\Components\IconModules\IconModule_Texts\Texts.lua line 438:<br>&nbsp;&nbsp; attempt to compare nil with number<br>Debug:<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; ...en\Components\IconModules\IconModule_Texts\Texts.lua:438: GetTextFromSettingsAndLayout()<br>&nbsp;&nbsp; ...en\Components\IconModules\IconModule_Texts\Texts.lua:591: OnKwargsUpdated()<br>&nbsp;&nbsp; ...en\Components\IconModules\IconModule_Texts\Texts.lua:610: DOGTAGUNIT()<br>&nbsp;&nbsp; ...en\Components\IconModules\IconModule_Texts\Texts.lua:482:<br>&nbsp; &nbsp; &nbsp; ...en\Components\IconModules\IconModule_Texts\Texts.lua:478<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; [C]: ?<br>&nbsp;&nbsp; [string &quot;safecall Dispatcher[1]&quot;]:9:<br>&nbsp; &nbsp; &nbsp; [string &quot;safecall Dispatcher[1]&quot;]:5<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; TellMeWhen\TellMeWhen.lua:4876: Enable()<br>&nbsp;&nbsp; ...rface\AddOns\TellMeWhen\Components\Core\IconView.lua:57: implementorFunc()<br>&nbsp;&nbsp; TellMeWhen\TellMeWhen.lua:4753:<br>&nbsp; &nbsp; &nbsp; TellMeWhen\TellMeWhen.lua:4746<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; [C]: ?<br>&nbsp;&nbsp; [string &quot;safecall Dispatcher[2]&quot;]:9:<br>&nbsp; &nbsp; &nbsp; [string &quot;safecall Dispatcher[2]&quot;]:5<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; TellMeWhen\TellMeWhen.lua:4225: ImplementIntoIcon()<br>&nbsp;&nbsp; ...rface\AddOns\TellMeWhen\Components\Core\IconView.lua:113:<br>&nbsp; &nbsp; &nbsp; ...rface\AddOns\TellMeWhen\Components\Core\IconView.lua:88<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; [C]: ?<br>&nbsp;&nbsp; ...<br>&nbsp;&nbsp; [string &quot;safecall Dispatcher[1]&quot;]:9:<br>&nbsp; &nbsp; &nbsp; [string &quot;safecall Dispatcher[1]&quot;]:5<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; TellMeWhen\TellMeWhen.lua:3447:<br>&nbsp; &nbsp; &nbsp; TellMeWhen\TellMeWhen.lua:3402<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; [C]: ?<br>&nbsp;&nbsp; [string &quot;safecall Dispatcher[1]&quot;]:9:<br>&nbsp; &nbsp; &nbsp; [string &quot;safecall Dispatcher[1]&quot;]:5<br>&nbsp;&nbsp; (tail call): ?<br>&nbsp;&nbsp; TellMeWhen\TellMeWhen.lua:1917: Update()<br>&nbsp;&nbsp; TellMeWhen\TellMeWhen.lua:1783: ?()<br>&nbsp;&nbsp; ...Ons\Ace3\CallbackHandler-1.0\CallbackHandler-1.0.lua:147:<br>&nbsp; &nbsp; &nbsp; ...Ons\Ace3\CallbackHandler-1.0\CallbackHandler-1.0.lua:147<br>&nbsp;&nbsp; [string &quot;safecall Dispatcher[3]&quot;]:4:<br>&nbsp; &nbsp; &nbsp; [string &quot;safecall Dispatcher[3]&quot;]:4<br>&nbsp;&nbsp; [C]: ?<br>&nbsp;&nbsp; [string &quot;safecall Dispatcher[3]&quot;]:13: ?()<br>&nbsp;&nbsp; ...Ons\Ace3\CallbackHandler-1.0\CallbackHandler-1.0.lua:92: Fire()<br>&nbsp;&nbsp; Ace3\AceDB-3.0\AceDB-3.0.lua:462: SetProfile()<br>&nbsp;&nbsp; TellMeWhen\Options\ImportExport.lua:97: Import_ImportData()<br>&nbsp;&nbsp; ...ace\AddOns\TellMeWhen\Options\TellMeWhen_Options.lua:2915: Import()<br>&nbsp;&nbsp; TellMeWhen\Options\ImportExport.lua:200: func()<br>&nbsp;&nbsp; ..\FrameXML\UIDropDownMenu.lua:710: UIDropDownMenuButton_OnClick()<br>&nbsp;&nbsp; [string &quot;*:OnClick&quot;]:1:<br>&nbsp; &nbsp; &nbsp; [string &quot;*:OnClick&quot;]:1</p>
+                        </div>
+                    </div>
+                </li>  
+
+                
+                        <li class="project-issue-event tag-management ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/AmeroGer">
+            <img style="max-width: 16px" src="https://secure.gravatar.com/avatar/43cc77b13a814bbd57787efe7f54317c?d=retro&amp;s=16"  alt="AmeroGer&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/AmeroGer">AmeroGer</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    added the tags
+                                    
+                                        <span class="tag-tag">
+                                            New
+                                        </span>
+                                    
+                                        <span class="tag-tag">
+                                            Defect
+                                        </span>
+                                    </span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 3 2012 04:47:22 (CDT) (UTC-5:00)" data-epoch="1346665642">Sep 3, 2012</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 3 2012 17:14:05 (CDT) (UTC-5:00)" data-epoch="1346710445">Sep 3, 2012</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>What is the profile that you tried to import? Was it from a string that you can link me?</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/AmeroGer">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/43cc77b13a814bbd57787efe7f54317c?d=retro&amp;s=48"  alt="AmeroGer&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/AmeroGer">AmeroGer</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 3 2012 19:04:04 (CDT) (UTC-5:00)" data-epoch="1346717044">Sep 3, 2012</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>It was the warrior profile:</p>
+<p><span style="font-size:5.0%">^1^T^STextLayouts^T ^Sbar1^T ^N1^T ^t^N2^T ^t^t^Sicon1^T ^N1^T ^t^N2^T ^t^t^t^SNumGroups^N8 ^STextureName^SMinimalist ^SClockGCD^b ^SGroups^T ^N1^T ^SPoint^T ^Sy^N-162 ^Sx^F-5664916782724331 ^f-67^t ^SScale^N1.1 ^SLocked^B ^SLevel^N20 ^SColumns^N20 ^SIcons^T ^N1^T ^SShowTimer^B ^SType^Scooldown ^SName^SSymbiosis ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sexp^T ^STextLayout^S ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N2^T ^SShowTimer^B ^SType^Scooldown ^SName^SDisarm ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N3^T ^SShowTimer^B ^SType^Scooldown ^SName^SIntimidating`Shout ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N4^T ^SShowTimer^B ^SType^Scooldown ^SName^SHeroic`Throw ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N6^T ^SShowTimer^B ^SType^Scooldown ^SName^SShield`Wall ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N7^T ^SShowTimer^B ^SType^Scooldown ^SName^SDie`by`the`Sword;`Last`Stand ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F4521260802379792 ^f-59^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N8^T ^SShowTimer^B ^SType^Scooldown ^SName^SRallying`Cry ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N9^T ^SShowTimer^B ^SType^Scooldown ^SName^SEnraged`Regeneration ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N11^T ^SShowTimer^B ^SType^Scooldown ^SName^SRecklessness ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N12^T ^SShowTimer^B ^SType^Scooldown ^SName^SDeadly`Calm ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N13^T ^SShowTimer^B ^SType^Scooldown ^SName^SAvatar ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N15^T ^SShowTimer^B ^SOnlyEquipped^B ^SType^Sitem ^SICDType^Sspellcast ^SOnlyInBags^B ^SShowTimerText^B ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F5086418402677266 ^f-55^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SEnabled^B ^SName^SCataclysmic`Gladiator's`Medallion`of`Tenacity;`Ruthless`Gladiator's`Medallion`of`Tenacity;`Vicious`Gladiator's`Medallion`of`Tenacity ^t^N16^T ^SShowTimer^B ^SType^Scooldown ^SName^SBerserker`Rage ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N18^T ^SShowTimer^B ^SType^Scooldown ^SName^SSkull`Banner ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N19^T ^SShowTimer^B ^SType^Scooldown ^SName^SDemoralizing`Banner ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N20^T ^SShowTimer^B ^SType^Scooldown ^SName^SMocking`Banner ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^t^SName^SCooldowns ^t^N2^T ^SPoint^T ^Sy^N-71 ^t^SScale^N1.28 ^SLocked^B ^SEnabled^B ^SColumns^N3 ^SIcons^T ^N1^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon1 ^N2^STellMeWhen_Group5_Icon2 ^N3^STellMeWhen_Group5_Icon3 ^N4^STellMeWhen_Group5_Icon4 ^N5^STellMeWhen_Group5_Icon5 ^N6^STellMeWhen_Group5_Icon6 ^t^SEnabled^B ^t^N2^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon18 ^N2^STellMeWhen_Group5_Icon17 ^N3^STellMeWhen_Group7_Icon1 ^N4^STellMeWhen_Group7_Icon61 ^N5^STellMeWhen_Group7_Icon91 ^t^SEvents^T ^N1^T ^SType^SAnimations ^SIcon^STellMeWhen_Group5_Icon26 ^SAnimation^SICONCLEAR ^SEvent^SOnIconHide ^t^N2^T ^SType^SAnimations ^SIcon^STellMeWhen_Group5_Icon25 ^SAnimation^SICONCLEAR ^SEvent^SOnIconHide ^t^N3^T ^SType^SAnimations ^Sg_anim^F7947528754183228 ^f-53^Sa_anim ^N1^SIcon ^STellMeWhen_Group5_Icon26^SAnimation ^SICONBORDER^SPeriod ^N0^SEvent ^SOnIconShow^SInfinite ^B^t ^N4^T ^SFade^b ^SType^SAnimations ^Sa_anim^N1 ^SIcon^STellMeWhen_Group5_Icon25 ^SAnimation^SICONBORDER ^SPeriod^N0 ^SEvent^SOnIconShow ^SInfinite^B ^t^Sn^N4 ^t^SEnabled^B ^t^N3^T ^SShowTimer^B ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon30 ^N2^STellMeWhen_Group5_Icon29 ^N3^STellMeWhen_Group5_Icon28 ^t^SName^SBattle`Shout;`WoW's`7th`Anniversary ^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^t^SName^SLarge`Center`Icons ^SSettingsPerView^T ^Sicon^T ^SSpacingY^N3 ^SSpacingX^N105.5 ^t^t^t^N3^T ^SStrata^SLOW ^SPoint^T ^Sy^N-95 ^Sx^F7399517395264820 ^f-67^t ^SScale^F8619655765688320 ^f-53^SRows ^N3^SLocked ^B^SLevel ^N20^SEnabled ^B^SColumns ^N11^SIcons ^T^N6^T ^SShowTimer^B ^SUnit^Starget ^SType^Scooldown ^SName^SPummel ^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^SDurationMax^N2 ^t^N12^T ^SShowTimer^B ^SType^Scooldown ^SName^SStaggering`Shout ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^SThickness^N4 ^Sg_anim^N1 ^SDuration^N1 ^Sa_anim^N1 ^Sb_anim^F6216733603272213 ^f-57^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N13^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon13 ^N2^STellMeWhen_Group5_Icon14 ^t^SEnabled^B ^t^N14^T ^SShowTimer^B ^SType^Scooldown ^SName^SBladestorm;`Shockwave;`Dragon`Roar ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N15^T ^SShowTimer^B ^SType^Scooldown ^SName^SMass`Spell`Reflection ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^SThickness^N4 ^Sg_anim^N1 ^SDuration^N1 ^Sa_anim^N1 ^Sb_anim^F6216733603272213 ^f-57^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N16^T ^SShowTimer^B ^SType^Scooldown ^SName^SSpell`Reflection ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N18^T ^SShowTimer^B ^SType^Scooldown ^SName^SCharge ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N19^T ^SShowTimer^B ^SType^Scooldown ^SName^SIntervene ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^SThickness^N4 ^Sg_anim^N1 ^SDuration^N1 ^Sa_anim^N1 ^Sb_anim^F6216733603272213 ^f-57^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N20^T ^SShowTimer^B ^SType^Scooldown ^SName^SHeroic`Leap ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^SThickness^N4 ^Sg_anim^N1 ^SDuration^N1 ^Sa_anim^N1 ^Sb_anim^F6216733603272213 ^f-57^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N21^T ^SShowTimer^B ^SType^Scooldown ^SName^STaunt ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N22^T ^SShowTimer^B ^SType^Scooldown ^SName^SDemoralizing`Shout ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SShowTimerText^B ^SEnabled^B ^t^N28^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group7_Icon15 ^N2^STellMeWhen_Group7_Icon105 ^t^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SEnabled^B ^t^t^SName^SSmall`Center`Icons ^SSettingsPerView^T ^Sicon^T ^SSpacingY^F5854679515581647 ^f-51^SSpacingX ^N-1^t ^t^t^N4^T ^SView^Sbar ^SStrata^SLOW ^SPoint^T ^Sy^N-27 ^t^SScale^N1.25 ^SLocked^B ^SLevel^N1 ^SEnabled^B ^SColumns^N1 ^SIcons^T ^N1^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon42 ^N2^STellMeWhen_Group5_Icon41 ^t^SEnabled^B ^t^t^SName^SEnemy`Spellcast ^t^N5^T ^SPoint^T ^Sy^F-5867324042600846 ^f-47^Sx ^F5166549724505990^f-48 ^Spoint^SLEFT ^SrelativePoint^SLEFT ^t^SScale^N1.2 ^SRows^N7 ^SEnabled^B ^SColumns^N6 ^SIcons^T ^N1^T ^SShowTimer^B ^SSort^N1 ^SType^Sbuff ^SShowTimerText^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sexp^T ^STextLayout^S ^t^t^SFakeHidden^B ^SEnabled^B ^SEvents^T ^SOnShow^T ^SDuration^N5 ^SPeriod^N0.1 ^t^t^SName^SSpell`Reflection;`Mass`Spell`Reflection ^t^N2^T ^SCLEUEvents^T ^SSPELL_REFLECT^B ^t^SType^Scleu ^SCLEUDur^N3 ^SFakeHidden^B ^SEnabled^B ^SEvents^T ^SOnShow^T ^Sb^F4521260802379792 ^f-59^Sg ^N0^SChannel ^SSAY^SLocation ^SNotification^SSticky ^B^SSize ^N38^SText ^SReflected`%e's`%s.^t ^t^SSourceUnit^Splayer ^t^N3^T ^SShowTimer^B ^SType^Scooldown ^SConditions^T ^N1^T ^SType^SSTANCE ^SName^SDefensive`Stance ^t^Sn^N1 ^t^SName^SDefensive`Stance ^SShowWhen^N3 ^SCustomTex^SDefensive`Stance ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N4^T ^SShowTimer^B ^SType^Scooldown ^SConditions^T ^N1^T ^SType^SSTANCE ^SName^SBerserker`Stance ^t^Sn^N1 ^t^SName^SBerserker`Stance ^SShowWhen^N3 ^SCustomTex^SBerserker`Stance ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N5^T ^SShowTimer^B ^SType^Scooldown ^SConditions^T ^N1^T ^SType^SSTANCE ^SName^SBattle`Stance ^t^Sn^N1 ^t^SName^SBattle`Stance ^SShowWhen^N3 ^SCustomTex^SBattle`Stance ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N6^T ^SType^Sconditionicon ^SCustomTex^SInterface/Icons/ability_vehicle_shellshieldgenerator ^SFakeHidden^B ^SConditions^T ^N1^T ^SType^SITEMEQUIPPED ^SName^SCataclysmic`Gladiator's`Shield`Wall ^SPrtsBefore^N1 ^t^N2^T ^SType^SITEMEQUIPPED ^SPrtsAfter^N1 ^SName^SVicious`Gladiator's`Shield`Wall ^SAndOr^SOR ^t^N3^T ^SType^STREE ^SLevel^N1 ^t^Sn^N3 ^t^SUnAlpha^N0 ^SEnabled^B ^t^N13^T ^SShowTimer^B ^SType^Scooldown ^SName^SShield`Block ^SShowWhen^N3 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N14^T ^SShowTimer^B ^SType^Scooldown ^SName^SSweeping`Strikes ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SEvents^T ^N1^T ^SFade^b ^SType^SAnimations ^SDuration^N1 ^Sa_anim^N1 ^SThickness^N4 ^SAnimation^SICONBORDER ^SEvent^SOnStart ^SPeriod^N1 ^t^N2^T ^SFade^b ^Sr_anim^N0 ^SType^SAnimations ^Sb_anim^F6216733603272213 ^f-57^Sg_anim ^N1^SDuration ^N1^Sa_anim ^N1^SThickness ^N4^SAnimation ^SICONBORDER^SEvent ^SOnFinish^SPassThrough ^b^SPeriod ^N1^t ^Sn^N2 ^t^SShowTimerText^B ^t^N17^T ^SType^Sbuff ^SName^SVictorious ^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SCustomTex^SVictory`Rush ^SFakeHidden^B ^SConditions^T ^N1^T ^SType^SHEALTH ^SOperator^S&lt;= ^SLevel^N75 ^SAndOr^SOR ^t^N2^T ^SType^SBUFFDUR ^SOperator^S&lt;= ^SName^SVictorious ^SLevel^N5 ^SAndOr^SOR ^t^Sn^N2 ^t^SEnabled^B ^SDurationMax^N5 ^t^N18^T ^SShowTimer^B ^SType^Scooldown ^SName^SShattering`Throw ^SShowWhen^N3 ^SEnabled^B ^SShowTimerText^B ^SConditions^T ^N1^T ^SType^SBUFFDUR ^SOperator^S|= ^SUnit^Starget ^SName^SIce`Block ^t^N2^T ^SType^SBUFFDUR ^SOperator^S|= ^SUnit^Starget ^SName^SDivine`Shield ^SAndOr^SOR ^t^N3^T ^SType^SBUFFDUR ^SOperator^S|= ^SUnit^Starget ^SName^SBlessing`of`Protection ^SAndOr^SOR ^t^Sn^N3 ^t^SFakeHidden^B ^t^N25^T ^SShowTimer^B ^SBuffOrDebuff^SHARMFUL ^SUnit^Starget ^SType^Sconditionicon ^SConditions^T ^N1^T ^SType^SBUFFSTACKS ^SName^STaste`for`Blood ^SLevel^N5 ^SAndOr^SOR ^t^N2^T ^SType^SBUFFDUR ^SOperator^S&lt;= ^SName^STaste`for`Blood ^SLevel^N3 ^SPrtsBefore^N1 ^SAndOr^SOR ^t^N3^T ^SType^SBUFFDUR ^SPrtsAfter^N1 ^SOperator^S|= ^SName^STaste`for`Blood ^t^Sn^N3 ^t^SIcons^T ^N1^STellMeWhen_Group1_Icon11 ^N2^STellMeWhen_Group1_Icon12 ^t^SName^SHeroic`Strike ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SCustomTex^STaste`for`Blood ^SEnabled^B ^SFakeHidden^B ^SUnAlpha^N0.5 ^SOnlyMine^B ^SEvents^T ^SOnIconShow^T ^SDuration^N5 ^t^t^SShowTimerText^B ^t^N26^T ^SShowTimer^B ^SBuffOrDebuff^SHARMFUL ^SUnit^Starget ^SType^Sconditionicon ^SConditions^T ^N1^T ^SType^SRAGE ^SOperator^S&gt;= ^SLevel^N70 ^SPrtsBefore^N1 ^t^N2^T ^SType^SBUFFSTACKS ^SOperator^S|= ^SName^SDeadly`Calm ^SAndOr^SOR ^t^N3^T ^SType^SBUFFDUR ^SPrtsAfter^N1 ^SOperator^S|= ^SName^SUltimatum ^SAndOr^SOR ^t^N4^T ^SType^SICON ^SLevel^N1 ^SIcon^STellMeWhen_Group5_Icon25 ^t^Sn^N4 ^t^SIcons^T ^N1^STellMeWhen_Group1_Icon11 ^N2^STellMeWhen_Group1_Icon12 ^t^SShowTimerText^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SCustomTex^SHeroic`Strike ^SEnabled^B ^SFakeHidden^B ^SUnAlpha^N0.5 ^SOnlyMine^B ^SEvents^T ^SOnIconShow^T ^SDuration^N5 ^t^t^SName^SHeroic`Strike ^t^N28^T ^SShowTimer^B ^SType^Sbuff ^SConditions^T ^N1^T ^SType^SRESTING ^SLevel^N1 ^t^N2^T ^SType^SSPELLCD ^SName^SBattle`Shout ^t^N3^T ^SType^SVEHICLE ^SLevel^N1 ^t^N4^T ^SType^SMOUNTED ^SLevel^N1 ^t^Sn^N4 ^t^SShowTimerText^B ^SDurationMaxEnabled^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SCustomTex^S8118 ^SFakeHidden^B ^SEnabled^B ^SDurationMax^N10 ^SName^SBattle`Shout;`Horn`of`Winter;`Strength`of`Earth`Totem;`Roar`of`Courage ^t^N29^T ^SShowTimer^B ^SCLEUEvents^T ^SSPELL_CAST_SUCCESS^B ^t^SType^Scleu ^SName^SBattle`Shout;`Commanding`Shout ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SCLEUDur^N60 ^SEnabled^B ^SFakeHidden^B ^SSourceUnit^Splayer ^SShowTimerText^B ^t^N30^T ^SShowTimer^B ^SType^Scooldown ^SName^STaunt ^SShowWhen^N1 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N37^T ^SShowTimer^B ^SBuffOrDebuff^SEITHER ^SSort^N1 ^SType^Sbuff ^SName^SCrowdControl;`Disarmed;`Stunned;`Disoriented;`Feared;`Incapacitated ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N38^T ^SShowTimer^B ^SBuffOrDebuff^SEITHER ^SSort^N1 ^SType^Sbuff ^SName^SRooted ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N39^T ^SShowTimer^B ^SBuffOrDebuff^SEITHER ^SSort^N1 ^SType^Sbuff ^SName^SCombustion ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N41^T ^SUnit^Sarena1;`arena2;`arena3;`arena4;`arena5;`target;`focus ^SType^Scast ^SInvertCBar^B ^SName^SPolymorph;`Hex;`Cyclone;`Mind`Control;`Entangling`Roots ^SSettingsPerView^T ^Sicon^T ^STexts^T ^N1^S[Unit:Name] ^t^t^t^SShowTimerText^B ^SInvertPBar^B ^SEvents^T ^SOnStart^T ^SSound^SInterface\AddOns\Powersounds\suspense1.mp3 ^SSoundData^SInterface\AddOns\Powersounds\suspense1.mp3 ^t^SOnShow^T ^SDuration^N0.5 ^SPeriod^N0.5 ^t^t^SShowCBar^B ^SFakeHidden^B ^SEnabled^B ^t^N42^T ^SUnit^Sarena1;`arena2;`arena3;`arena4;`arena5;`target;`focus ^SType^Scast ^SConditions^T ^N1^T ^SType^SUNITISUNIT ^SUnit^S%u-target ^SName^Splayer ^t^Sn^N1 ^t^SInvertCBar^B ^SShowTimerText^B ^SSettingsPerView^T ^Sicon^T ^STexts^T ^N1^S[Unit:Name] ^t^t^t^SName^SPolymorph;`Hex;`Cyclone;`Mind`Control;`Entangling`Roots ^SInvertPBar^B ^SEvents^T ^N1^T ^SType^SAnimations ^SAnimation^SACTVTNGLOW ^SEvent^SOnShow ^SInfinite^B ^t^SOnShow^T ^SDuration^N0.5 ^SAnimation^SACTVTNGLOW ^SPeriod^N0.5 ^SInfinite^B ^t^Sn^N1 ^t^SShowCBar^B ^SFakeHidden^B ^SEnabled^B ^t^t^SName^SMiscellaneous`Subicons ^t^N6^T ^SStrata^SLOW ^SPoint^T ^Sy^N-21 ^t^SScale^N1 ^SLocked^B ^SLevel^N20 ^SEnabled^B ^SColumns^N1 ^SIcons^T ^N1^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon37 ^N2^STellMeWhen_Group5_Icon38 ^N3^STellMeWhen_Group5_Icon39 ^t^SEnabled^B ^t^t^SName^SCrowdcontrol ^t^N7^T ^SPoint^T ^Sy^F-4503604433255932 ^f-50^Sx ^F-5963072093445202^f-67 ^Spoint^STOP ^SrelativePoint^STOP ^t^SScale^N1.2 ^SRows^N7 ^SLocked^B ^SEnabled^B ^SColumns^N15 ^SIcons^T ^N1^T ^SSort^N-1 ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group7_Icon2 ^N2^STellMeWhen_Group7_Icon3 ^N3^STellMeWhen_Group7_Icon4 ^N4^STellMeWhen_Group7_Icon5 ^N5^STellMeWhen_Group7_Icon6 ^N6^STellMeWhen_Group7_Icon7 ^N7^STellMeWhen_Group7_Icon8 ^t^SFakeHidden^B ^SConditions^T ^N1^T ^SType^STREE ^SLevel^N1 ^t^Sn^N1 ^t^SEnabled^B ^t^N2^T ^SShowTimer^B ^SType^Sreactive ^SConditions^T ^N1^T ^SType^SBUFFDUR ^SOperator^S|= ^SUnit^Starget ^SName^SEvasion ^t^N2^T ^SType^SBUFFDUR ^SOperator^S|= ^SUnit^Starget ^SName^SDie`by`the`Sword ^SAndOr^SOR ^t^Sn^N2 ^t^SShowTimerText^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SUseActvtnOverlay^B ^SName^SOverpower ^t^N3^T ^SShowTimer^B ^SType^Sreactive ^SName^SExecute ^SManaCheck^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SHEALTH ^SOperator^S&lt;= ^SUnit^Starget ^SLevel^N20 ^t^N2^T ^SType^SRAGE ^SOperator^S&gt;= ^SLevel^N30 ^t^N3^T ^SType^SALIVE ^SUnit^Starget ^t^N4^T ^SType^SEXISTS ^SUnit^Starget ^t^Sn^N4 ^t^SShowTimerText^B ^t^N4^T ^SShowTimer^B ^SType^Scooldown ^SDurationAlpha^N0.25 ^SStackAlpha^N0.25 ^SShowTimerText^B ^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SRAGE ^SOperator^S&lt;= ^SLevel^N90 ^t^Sn^N1 ^t^SName^SMortal`Strike ^t^N5^T ^SSort^N1 ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group7_Icon20 ^N2^STellMeWhen_Group7_Icon35 ^t^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sexp^T ^STextLayout^S ^t^t^SFakeHidden^B ^SEnabled^B ^t^N6^T ^SShowTimer^B ^SType^Scooldown ^SDurationAlpha^N0.25 ^SStackAlpha^N0.25 ^SName^SSlam ^SManaCheck^B ^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SLUA ^SPrtsAfter^N1 ^SOperator^S&gt;= ^SName^S(CooldownDuration("Colossus`Smash")`-`CooldownDuration("gcd"))`&gt;=`1 ^SLevel^N1 ^SPrtsBefore^N2 ^t^N2^T ^SType^SLUA ^SName^S(CooldownDuration("Colossus`Smash"))`&gt;=`(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")) ^t^N3^T ^SType^SLUA ^SName^S(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")`-`CooldownDuration("gcd"))`&gt;=1 ^SAndOr^SOR ^SPrtsBefore^N1 ^t^N4^T ^SType^SLUA ^SPrtsAfter^N2 ^SOperator^S&gt;= ^SName^S(CooldownDuration("Colossus`Smash"))`&lt;=`(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")) ^SLevel^N1 ^t^N5^T ^SType^SLUA ^SName^S(CooldownDuration("Mortal`Strike")`-`CooldownDuration("gcd"))`&gt;=`1 ^t^N6^T ^SType^SRAGE ^SOperator^S&gt;= ^SLevel^N70 ^t^Sn^N6 ^t^SShowTimerText^B ^t^N7^T ^SShowTimer^B ^SType^Sreactive ^SDurationAlpha^N0.25 ^SStackAlpha^N0.25 ^SName^SOverpower ^SManaCheck^B ^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SLUA ^SPrtsAfter^N1 ^SOperator^S&gt;= ^SName^S(CooldownDuration("Colossus`Smash")`-`CooldownDuration("gcd"))`&gt;=`1 ^SLevel^N1 ^SPrtsBefore^N2 ^t^N2^T ^SType^SLUA ^SName^S(CooldownDuration("Colossus`Smash"))`&gt;=`(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")) ^t^N3^T ^SType^SLUA ^SName^S(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")`-`CooldownDuration("gcd"))`&gt;=1 ^SAndOr^SOR ^SPrtsBefore^N1 ^t^N4^T ^SType^SLUA ^SPrtsAfter^N2 ^SOperator^S&gt;= ^SName^S(CooldownDuration("Colossus`Smash"))`&lt;=`(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")) ^SLevel^N1 ^t^N5^T ^SType^SLUA ^SName^S(CooldownDuration("Mortal`Strike")`-`CooldownDuration("gcd"))`&gt;=`1 ^t^Sn^N5 ^t^SShowTimerText^B ^t^N8^T ^SShowTimer^B ^SType^Scooldown ^SDurationAlpha^N0.25 ^SStackAlpha^N0.25 ^SShowTimerText^B ^SManaCheck^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sexp^T ^STextLayout^S ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SLUA ^SPrtsAfter^N1 ^SOperator^S&gt;= ^SName^S(CooldownDuration("Colossus`Smash")`-`CooldownDuration("gcd"))`&gt;=`1 ^SLevel^N1 ^SPrtsBefore^N2 ^t^N2^T ^SType^SLUA ^SName^S(CooldownDuration("Colossus`Smash"))`&gt;=`(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")) ^t^N3^T ^SType^SLUA ^SName^S(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")`-`CooldownDuration("gcd"))`&gt;=1 ^SAndOr^SOR ^SPrtsBefore^N1 ^t^N4^T ^SType^SLUA ^SPrtsAfter^N2 ^SOperator^S&gt;= ^SName^S(CooldownDuration("Colossus`Smash"))`&lt;=`(AuraDur("target",`86346,`"Colossus`Smash",`"HARMFUL`PLAYER")) ^SLevel^N1 ^t^N5^T ^SType^SLUA ^SName^S(CooldownDuration("Mortal`Strike")`-`CooldownDuration("gcd"))`&gt;=`1 ^t^Sn^N5 ^t^SName^SSlam ^t^N12^T ^SShowTimer^B ^SType^Scooldown ^SName^SThunder`Clap ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N13^T ^SShowTimer^B ^SBuffOrDebuff^SHARMFUL ^SUnit^Starget ^SType^Sbuff ^SName^SWeakened`Blows ^SFakeHidden^B ^SEnabled^B ^SShowTimerText^B ^t^N14^T ^SShowTimer^B ^SType^Scooldown ^SName^SThunder`Clap ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N1 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N15^T ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group7_Icon14 ^N2^STellMeWhen_Group7_Icon13 ^N3^STellMeWhen_Group7_Icon12 ^t^SFakeHidden^B ^SConditions^T ^N1^T ^SType^STREE ^SLevel^N1 ^t^Sn^N1 ^t^SEnabled^B ^t^N20^T ^SShowTimer^B ^SConditionAlpha^N0.25 ^SType^Scooldown ^SDurationAlpha^N0.25 ^SStackAlpha^N0.25 ^SName^SColossus`Smash ^SSettingsPerView^T ^Sexp^T ^STextLayout^S ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sbar^T ^STextLayout^Sbar1 ^t^t^SShowWhen^N3 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N35^T ^SShowTimer^B ^SBuffOrDebuff^SHARMFUL ^SUnit^Starget ^SType^Sbuff ^SAlpha^N0.5 ^SName^SColossus`Smash ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^Sexp^T ^STextLayout^S ^t^t^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SOnlyMine^B ^SShowTimerText^B ^t^N61^T ^SSort^N-1 ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group7_Icon62 ^N2^STellMeWhen_Group7_Icon63 ^N3^STellMeWhen_Group7_Icon64 ^N4^STellMeWhen_Group7_Icon65 ^N5^STellMeWhen_Group7_Icon66 ^N6^STellMeWhen_Group7_Icon67 ^t^SFakeHidden^B ^SConditions^T ^N1^T ^SType^STREE ^SLevel^N2 ^t^Sn^N1 ^t^SEnabled^B ^t^N62^T ^SShowTimer^B ^SType^Sreactive ^SName^SExecute ^SFakeHidden^B ^SConditions^T ^N1^T ^SType^SRAGE ^SOperator^S&gt;= ^SLevel^N30 ^t^N2^T ^SType^SBUFFSTACKS ^SOperator^S&lt; ^SName^SExecutioner ^SLevel^N5 ^t^Sn^N2 ^t^SEnabled^B ^t^N63^T ^SShowTimer^B ^SType^Scooldown ^SName^SColossus`Smash ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SDEBUFFDUR ^SChecked^B ^SUnit^Starget ^SName^SColossus`Smash ^t^Sn^N1 ^t^SShowTimerText^B ^t^N64^T ^SShowTimer^B ^SType^Scooldown ^SName^SBloodthirst ^SShowWhen^N3 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N65^T ^SShowTimer^B ^SType^Scooldown ^SName^SBerserker`Rage ^SFakeHidden^B ^SConditions^T ^N1^T ^SType^SBUFFDUR ^SName^SEnrage ^t^N2^T ^SType^SSPELLCD ^SName^SRaging`Blow ^t^N3^T ^SType^SLUA ^SName^S(CooldownDuration("Bloodthirst")`-`CooldownDuration("Raging`Blow"))`&gt;=`1 ^t^Sn^N3 ^t^SEnabled^B ^t^N66^T ^SShowTimer^B ^SType^Sreactive ^SName^SRaging`Blow ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SBUFFDUR ^SOperator^S|= ^SName^SEnrage ^SPrtsBefore^N1 ^t^N2^T ^SType^SBUFFDUR ^SPrtsAfter^N1 ^SOperator^S|= ^SName^SBerserker`Rage ^SAndOr^SOR ^t^N3^T ^SType^SLUA ^SName^S(CooldownDuration("Bloodthirst")`-`CooldownDuration("Raging`Blow"))`&gt;=`1 ^t^Sn^N3 ^t^SShowTimerText^B ^t^N67^T ^SShowTimer^B ^SType^Scooldown ^SName^SWild`Strike ^SFakeHidden^B ^SEnabled^B ^SConditions^T ^N1^T ^SType^SLUA ^SName^S(CooldownDuration("Bloodthirst")`-`CooldownDuration("Wild`Strike"))`&gt;=`1 ^t^Sn^N1 ^t^SShowTimerText^B ^t^N91^T ^SSort^N-1 ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group7_Icon92 ^N2^STellMeWhen_Group7_Icon93 ^N3^STellMeWhen_Group7_Icon94 ^t^SFakeHidden^B ^SConditions^T ^N1^T ^SType^STREE ^SLevel^N3 ^t^Sn^N1 ^t^SEnabled^B ^t^N92^T ^SShowTimer^B ^SType^Sreactive ^SConditions^T ^N1^T ^SType^SRAGE ^SOperator^S&lt;= ^SLevel^N85 ^t^Sn^N1 ^t^SName^SShield`Slam ^SCooldownCheck^B ^SShowWhen^N3 ^SShowTimerText^B ^SFakeHidden^B ^SEnabled^B ^SIgnoreNomana^B ^SUseActvtnOverlay^B ^t^N93^T ^SShowTimer^B ^SType^Sreactive ^SShowTimerText^B ^SCooldownCheck^B ^SShowWhen^N3 ^SFakeHidden^B ^SEnabled^B ^SUseActvtnOverlay^B ^SName^SRevenge ^t^N94^T ^SShowTimer^B ^SType^Scooldown ^SShowTimerText^B ^SSettingsPerView^T ^Sbar^T ^STextLayout^Sbar1 ^t^Sicon^T ^STextLayout^Sicon1 ^t^t^SShowWhen^N3 ^SEnabled^B ^SName^SDevastate;`Sunder`Armor ^SFakeHidden^B ^t^N104^T ^SShowTimer^B ^SType^Scooldown ^SName^SThunder`Clap ^SShowWhen^N3 ^SEnabled^B ^SShowTimerText^B ^SFakeHidden^B ^t^N105^T ^SSort^N-1 ^SType^Smeta ^SIcons^T ^N1^STellMeWhen_Group5_Icon17 ^N2^STellMeWhen_Group7_Icon104 ^N3^STellMeWhen_Group7_Icon91 ^t^SFakeHidden^B ^SConditions^T ^N1^T ^SType^STREE ^SLevel^N3 ^t^Sn^N1 ^t^SEnabled^B ^t^t^SName^SRotational`Subicons ^t^N8^T ^SView^Sbar ^SStrata^SLOW ^SPoint^T ^Sy^F5588154602851697 ^f-44^Sx ^F7303404153425207^f-44 ^Spoint^STOPLEFT ^SrelativePoint^SBOTTOMLEFT ^t^SScale^F5285983893767359 ^f-52^SRows ^N2^SLocked ^B^SLevel ^N20^SColumns ^N2^SSettingsPerView ^T^Sbar^T ^SSpacingY^N37 ^SSizeX^F5857282992199879 ^f-45^t ^Sicon^T ^SSpacingX^N-1 ^t^t^t^t^SEditorScale^F8106479114518528 ^f-53^SInterval ^N0^SVersion ^N60309^t ^N60309^S`| ^Sprofile^SWARRIOR ^^</span></p>
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 48px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/48/48/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/Cybeloras">Cybeloras</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 3 2012 19:59:50 (CDT) (UTC-5:00)" data-epoch="1346720390">Sep 3, 2012</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Yay! You just discovered a major flaw with importing profiles! (This bug is actually just a side-effect of the major flaw)</p>
+<p>Should be fixed in r576</p>
+<p>This major flaw was that importing a profile (create new profile) from a profile that already exists, or from the settings backup, would actually just create a new reference to the existing data. So, if your copy profile WARRIOR, and it gets named WARRIOR (2), any changes you make to WARRIOR (2) would also get made to WARRIOR until the next time you reload your UI.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event tag-management ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Cybeloras">Cybeloras</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    removed a tag
+                                    
+                                        <span class="tag-tag">
+                                            New
+                                        </span>
+                                    </span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 3 2012 20:00:10 (CDT) (UTC-5:00)" data-epoch="1346720410">Sep 3, 2012</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event tag-management ">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Cybeloras">Cybeloras</a>
+                                </span>
+                                <span class="e-infoLabel">
+                                    added a tag
+                                    
+                                        <span class="tag-tag">
+                                            Fixed
+                                        </span>
+                                    </span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 3 2012 20:00:11 (CDT) (UTC-5:00)" data-epoch="1346720411">Sep 3, 2012</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-event status-change closed">
+                            <div class="user-event">
+                                <span class="user-tag">
+                                    
+<div class="avatar avatar-16 user user-role-registered-user">
+        <a href="/members/Cybeloras">
+            <img style="max-width: 16px" src="https://media.forgecdn.net/avatars/thumbnails/64/275/16/16/636151561221451261.jpeg"  alt="Cybeloras&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                                    <a href="/members/Cybeloras">Cybeloras</a>
+                                </span>
+                                <span class="e-infoLabel">closed issue</span>
+                                <span><abbr class="tip standard-date standard-datetime" title="09 3 2012 20:00:12 (CDT) (UTC-5:00)" data-epoch="1346720412">Sep 3, 2012</abbr></span>
+                            </div>
+                        </li>
+                    
+                        <li class="project-issue-comment-container" data-target="project-issue-description">
+                            
+<div class="avatar avatar-48 user user-role-registered-user">
+        <a href="/members/AmeroGer">
+            <img style="max-width: 48px" src="https://secure.gravatar.com/avatar/43cc77b13a814bbd57787efe7f54317c?d=retro&amp;s=48"  alt="AmeroGer&#x27;s avatar"
+                onerror="if (this.src != 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y') this.src = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;f=y';" />
+        </a>
+    
+</div>
+
+                            <div class="project-issue-comment" data-target="project-issue-comment">
+                                <header class="project-issue-comment-header">
+                                    <span class="user-tag">
+                                        <a href="/members/AmeroGer">AmeroGer</a>
+                                    </span>
+                                    <span class="e-infoLabel">posted a comment</span><span> <abbr class="tip standard-date standard-datetime" title="09 3 2012 21:14:28 (CDT) (UTC-5:00)" data-epoch="1346724868">Sep 3, 2012</abbr></span>
+                                    <div class="project-issue-comment-actions">
+                                        
+                                    </div>
+                                </header>
+                                <div class="project-issue-comment-body" data-target="project-issue-comment-body">
+                                    <p>Such a relief. I feared it was going to be minor, ugh.</p>
+
+                                    <div class="project-issue-comment-body-modified">
+                                        
+                                    </div>
+                                </div>
+                                <div class="project-issue-comment-edit" data-target="project-issue-comment-edit"></div>
+                            </div>
+                        </li>
+                    
+            </ul>
+            <div class="project-issue-timeline-actions">
+                <hr/>
+                
+                    <p>
+                        To post a comment, please 
+                        <a href="/login?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f580">login</a> 
+                        or <a href="/register?returnUrl=%2fprojects%2ftellmewhen%2fissues%2f580">register</a> a new account.
+                    </p>
+                
+            </div>
+            
+        </form>
+
+                        
+                    </section>
+                </div>
+            </div>
+            
+            <!-- Above Footer -->
+            <section class="ad-container ad-container-footer">
+                <div class="ad-bin">
+                    
+                </div>
+            </section>
+            <div id="footer-push"></div>
+        </div>
+        <footer id="footer">
+            
+
+<footer class="curseforge-footer">
+    <nav class="curseforge-footer__container">
+		<section class="curseforge-footer__section curseforge-footer__section--logo">
+			<a href="https://twitch.tv" target="_blank" title="Twitch">
+				<figure class="curseforge-footer__logo-container">
+					<svg width="94px" height="32px" viewBox="0 0 94 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>Twitch</title>
+						<defs></defs>
+						<g id="logos/LogoTwitch" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path class="curseforge-footer__logo" d="M88.5,5 L82.5,5 L82.5,0 L73.5,0 L67.5,5 L62,5 L59.5,7.5 L59.5,5 L54.5,5 L54.5,0 L36.5,0 L36.5,5 L16.5,5 L11.5,0 L0.5,0 L0.5,22 L5.5,27.25 L14.5,32 L20.5,32 L20.5,30.5 L23.5,32 L35.5,32 L37.5,29 L38.5,32 L45.5,32 L45.5,29 L48.5,32 L56.5,32 L57,29 L59.5,32 L69.5,32 L72.5,29 L72.5,32 L76.5,32 L79.5,29 L79.5,32 L86.5,32 L93.5,26 L93.5,10 L88.5,5 Z M13.5,13 L8.5,13 L8.5,19 L13.5,19 L13.5,25 L6.5,25 L2.5,21 L2.5,2 L8.5,2 L8.5,7 L13.5,7 L13.5,13 Z M36.5,21.5 L33,25 L15.5,25 L15.5,7 L21.5,7 L21.5,19 L23.5,19 L23.5,7 L29.5,7 L29.5,19 L31.5,19 L31.5,7 L36.5,7 L36.5,21.5 Z M44.5,25 L38.5,25 L38.5,7 L44.5,7 L44.5,25 Z M44.5,5 L38.5,5 L38.5,2 L44.5,2 L44.5,5 Z M57.5,13 L52.5,13 L52.5,19 L57.5,19 L57.5,25 L50.5,25 L46.5,21 L46.5,2 L52.5,2 L52.5,7 L57.5,7 L57.5,13 Z M72.5,13 L65.5,13 L65.5,19 L72.5,19 L72.5,25 L63.5,25 L59.5,21 L59.5,11 L63.5,7 L72.5,7 L72.5,13 Z M91.5,25 L85.5,25 L85.5,13 L80.5,13 L80.5,25 L74.5,25 L74.5,2 L80.5,2 L80.5,7 L87.5,7 L91.5,11 L91.5,25 Z" id="LogoTwitch" fill="#000000" fill-rule="nonzero"></path>
+						</g>
+					</svg>
+				</figure>
+			</a>
+			<span class="curseforge-footer__copyright">© 2019 Twitch Interactive, Inc</span>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://twitch.tv/p/about/" target="_blank" class="curseforge-footer__item">About</a>
+			<a href="https://twitch.tv/jobs/" target="_blank" class="curseforge-footer__item">Careers</a>
+			<a href="https://twitch.tv/blog/" target="_blank" class="curseforge-footer__item">Blog</a>
+			<a href="https://twitch.tv/p/about/press-releases/" target="_blank" class="curseforge-footer__item">Press</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://twitch.tv/p/brand/" target="_blank" class="curseforge-footer__item">Brand</a>
+			<a href="https://music.twitch.tv/" target="_blank" class="curseforge-footer__item">Music</a>
+			<a href="https://twitchadvertising.tv/" target="_blank" class="curseforge-footer__item">Advertise</a>
+			<a href="https://twitch.tv/legal/ad-choices/" target="_blank" class="curseforge-footer__item">Ad Choices</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://www.twitch.tv/prime/" target="_blank" class="curseforge-footer__item">Prime</a>
+			<a href="https://twitch.tv/p/partners/" target="_blank" class="curseforge-footer__item">Partners</a>
+			<a href="https://affiliate.twitch.tv/" target="_blank" class="curseforge-footer__item">Affiliates</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://dev.twitch.tv/" target="_blank" class="curseforge-footer__item">Developers</a>
+			<a href="https://support.curseforge.com/hc/en-us" target="_blank" class="curseforge-footer__item">Help</a>
+			<a href="https://twitch.uservoice.com/forums/915910-game-mods-curseforge" target="_blank" class="curseforge-footer__item">Feedback</a>
+		</section>
+		<section class="curseforge-footer__section">
+			<a href="https://twitch.tv/legal/terms-of-service/" target="_blank" class="curseforge-footer__item">Terms of Service</a>
+			<a href="https://twitch.tv/legal/privacy-policy/" target="_blank" class="curseforge-footer__item">Privacy Policy</a>
+			<a href="https://twitch.tv/legal/cookie-policy/" target="_blank" class="curseforge-footer__item">Cookie Policy</a>
+		</section>
+    </nav>
+	<div class="curseforge-footer__copyright-container">
+		<span class="curseforge-footer__copyright">© 2019 Twitch Interactive, Inc</span>
+	</div>
+</footer>
+
+        </footer>
+        
+    </div>
+
+    <!-- Layout End -->
+    <div id="analytics">
+        <!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(
+        ['_setAccount', 'UA-389142-3'],
+        ['_setDomainName', 'curseforge.com'],
+        ['_addIgnoredRef', 'curseforge.com'],
+        ['_trackPageview'],
+        ['b._setAccount', 'UA-389142-11'],
+        ['b._setDomainName', 'curseforge.com'],
+        ['b._addIgnoredRef', 'curseforge.com'],
+        ['b._trackPageview']
+);
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Lotame -->
+<script src="https://tags.crwdcntrl.net/c/3613/cc.js?ns=_cc3613" id="LOTCC_3613"></script>
+<script>
+_cc3613.bcp();
+</script>
+<!-- End Lotame -->
+    </div>
+
+    
+    
+
+<script type="text/javascript">
+    Cobalt.Device.initialize();
+    Cobalt.Burger.initializeEarly();
+
+    Cobalt.Constants.initialize({"StaticURL":"/Content/2-0-6977-32150","SkinPath":"/Content/2-0-6977-32150/Skins/WoW","MediaURL":"https://media.forgecdn.net/","AvatarURL":"https://media.forgecdn.net/avatars","AttachmentURL":"https://media.forgecdn.net/attachments","ActiveConfiguration":"production","PrivacyPolicyLastUpdated":"0"});
+    
+    Cobalt.Constants.BuildVersion = "2-0-6977-32150";
+    Cobalt.Constants.IsDevelopment = false;
+    Cobalt.Constants.IgnoredUserIDs = [];
+    Cobalt.Constants.ServerTimestamp = 1550200554116.5
+    Cobalt.Constants.FacebookAppID = "";
+    Cobalt.Constants.QuoteCssClasses = "";
+    Cobalt.User.EnabledLanguageIDs = [1,2,3,4,7,8,9,15,16];
+    Cobalt.User.MaxQuoteDepth = 5;
+    Cobalt.User.AuthToken = "";
+    Cobalt.TinyMCE.extraPlugins = "";
+    Cobalt.TinyMCE.extraButtons = "";
+    Cobalt.TinyMCE.extraCustomPlugins = "";     
+
+    // NOTE: if you need to debug into tinymce, then change the following line to tinymce.js
+    Cobalt.TinyMCE.url = Cobalt.Constants.StaticURL + "/js/tinymce/tiny_mce/tinymce.min.js";
+    Cobalt.TinyMCE.customPluginUrl = Cobalt.Constants.StaticURL + "/js/tinymce/custom_plugins";
+    Cobalt.TinyMCE.skin_url = Cobalt.Constants.StaticURL + "/js/tinymce/custom_skin";
+    
+   
+    
+    Cobalt.Constants.SiteID = 10;
+    Cobalt.Constants.SiteName = "WoW CurseForge";
+    Cobalt.TinyMCE.fontColorEnabled = true;
+    Cobalt.TinyMCE.fontSizeEnabled = true;
+    Cobalt.TinyMCE.fontFamilyEnabled = true;
+    Cobalt.TinyMCE.textAlignmentEnabled = true;
+    Cobalt.TinyMCE.smiliesEnabled = true;
+    Cobalt.TinyMCE.forceSimpleBBCodeEditor = false;  
+    Cobalt.Constants.NestedQuotePreference  = 1;
+    
+    $.ajaxSetup({
+        data: {},
+        timeout: 30000
+    });
+    
+    
+
+    //bbcode entries
+    
+    Cobalt.Markup.customBBcodeButtons = [];    
+    
+    
+    
+    Cobalt.CMS.CobaltCss = ["/Content/2-0-6977-32150/Skins/Global-TinyMCE/css/compiled.css"];    
+    Cobalt.CMS.ProjectCss = ["/Content/2-0-6977-32150/Skins/WoW/css/compiled.css"];
+
+    // set the tracking id for google analytics on this site
+    Cobalt.Analytics.trackingId = 'UA-389142-11';
+
+</script>
+
+
+
+<script>
+    hljs.initHighlighting();
+</script>
+<script type="text/javascript">
+
+    Cobalt.runOnLoad(function () {
+        Cobalt.initialize([{dependency:Elerium.ProjectIssueDetails, priority:99, name:'Elerium.ProjectIssueDetails'},{dependency:Cobalt.TinyMCE, priority:99, name:'Cobalt.TinyMCE'},{dependency:Elerium.ProjectMobileSubMenu, priority:99, name:'Elerium.ProjectMobileSubMenu'},{dependency:Elerium.ProjectAnalytics, priority:99, name:'Elerium.ProjectAnalytics'},{dependency:Elerium.Favorite, priority:99, name:'Elerium.Favorite'},{dependency:Cobalt.Tabs, priority:99, name:'Cobalt.Tabs'},{dependency:Cobalt.NiceDates, priority:99, name:'Cobalt.NiceDates'},{dependency:Cobalt.Core, priority:99, name:'Cobalt.Core'},{dependency:Cobalt.Forms, priority:99, name:'Cobalt.Forms'},{dependency:Cobalt.UI, priority:99, name:'Cobalt.UI'},{dependency:Cobalt.Auth, priority:99, name:'Cobalt.Auth'},{dependency:Cobalt.Notifications, priority:99, name:'Cobalt.Notifications'},{dependency:Cobalt.Feedback, priority:99, name:'Cobalt.Feedback'},{dependency:Cobalt.WarningNotification, priority:99, name:'Cobalt.WarningNotification'},{dependency:Cobalt.Footer, priority:99, name:'Cobalt.Footer'},{dependency:Cobalt.Tidbit, priority:99, name:'Cobalt.Tidbit'},{dependency:Cobalt.BunnyEars, priority:99, name:'Cobalt.BunnyEars'},{dependency:Elerium.OverflowTip, priority:99, name:'Elerium.OverflowTip'},{dependency:Elerium.PostAction, priority:99, name:'Elerium.PostAction'},{dependency:Elerium.Analytics, priority:99, name:'Elerium.Analytics'},{dependency:Elerium.TwitchNurture, priority:99, name:'Elerium.TwitchNurture'}]);
+    });
+
+</script>
+</body>
+</html>
